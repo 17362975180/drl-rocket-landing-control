@@ -1,0 +1,62 @@
+{
+  "without_safety": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 2026,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.1363323500648177,
+    "std_final_velocity_error": 0.20487030745690757,
+    "mean_fuel_used": 4.435122317064553,
+    "std_fuel_used": 0.2127184658841617,
+    "mean_landing_time": 7.367999999999982,
+    "std_landing_time": 0.3902255757891824,
+    "mean_episode_reward": 1244.593903335822,
+    "std_episode_reward": 26.097823815442286,
+    "mean_abs_throttle_delta": 0.014624239668697546,
+    "mean_max_velocity": 15.846960351990457,
+    "mean_max_acceleration": 9.810175959840967,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "label": "without_safety"
+  },
+  "with_safety": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 2026,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.1334939245114954,
+    "std_final_velocity_error": 0.20469071855148982,
+    "mean_fuel_used": 4.437339144274594,
+    "std_fuel_used": 0.21291749019492348,
+    "mean_landing_time": 7.371999999999982,
+    "std_landing_time": 0.3902768248307846,
+    "mean_episode_reward": 1245.1436255623962,
+    "std_episode_reward": 25.859067371503976,
+    "mean_abs_throttle_delta": 0.01464654696716735,
+    "mean_max_velocity": 15.846960353485379,
+    "mean_max_acceleration": 9.810175959840967,
+    "mean_safety_interventions": 1.32,
+    "mean_safety_intervention_rate": 0.008625599373516517,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "label": "with_safety"
+  }
+}

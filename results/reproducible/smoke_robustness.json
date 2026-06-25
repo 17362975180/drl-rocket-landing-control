@@ -1,0 +1,540 @@
+{
+  "standard": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 1000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 120.19242595114675,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 8.433423330387352,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.000000000000003,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 7.249999999999982,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2451.721825293819,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.00717507219976849,
+    "mean_max_velocity": 22.738320717943395,
+    "mean_max_acceleration": 10.811254150103267,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_height": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 11000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 120.98765592860349,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 21.442214586211186,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.0,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 5.899999999999987,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2216.50883829113,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.007897195716698965,
+    "mean_max_velocity": 25.82419230417484,
+    "mean_max_acceleration": 11.14377781632598,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        30.0,
+        70.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_velocity": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 21000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 121.13792914095745,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 24.208574522320273,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 4.999999999999999,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 5.849999999999987,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2234.64935512844,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.008087230256180567,
+    "mean_max_velocity": 26.99615344971487,
+    "mean_max_acceleration": 11.267584602161094,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -5.0,
+        5.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_mass": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 31000,
+    "success_rate": 0.0,
+    "crash_rate": 1.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 34.5532927540575,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.000000000000001,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 11.000000000000021,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2562.7559941057407,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.004926174334739441,
+    "mean_max_velocity": 34.5532927540575,
+    "mean_max_acceleration": 9.961642751069668,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "dry_mass_range": [
+        8.0,
+        12.0
+      ]
+    }
+  },
+  "random_fuel": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 41000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 120.38405000519009,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 15.796822147240684,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 6.100372074414563,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 7.84999999999998,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2509.6764691925455,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.006335668361339814,
+    "mean_max_velocity": 24.312179780209323,
+    "mean_max_acceleration": 10.99216417133043,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "initial_fuel_range": [
+        3.0,
+        7.0
+      ]
+    }
+  },
+  "gravity_bias": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 51000,
+    "success_rate": 0.0,
+    "crash_rate": 1.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 39.667999862677945,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.0000000000000036,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 11.900000000000034,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2911.157612904295,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.005633959088883193,
+    "mean_max_velocity": 39.667999862677945,
+    "mean_max_acceleration": 10.888806498703083,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "gravity_scale_range": [
+        0.9,
+        1.1
+      ]
+    }
+  },
+  "thrust_bias": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 61000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 120.40045323958724,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 18.843298692570684,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.000000000000002,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 6.149999999999986,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2294.695139369211,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.0085724412662084,
+    "mean_max_velocity": 27.013256566399907,
+    "mean_max_acceleration": 11.26943206064432,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "thrust_scale_range": [
+        0.9,
+        1.1
+      ]
+    }
+  },
+  "sensor_noise": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 71000,
+    "success_rate": 0.0,
+    "crash_rate": 1.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 42.402553838200994,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.0,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 13.00000000000005,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -3321.1245497656814,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.03868852931876671,
+    "mean_max_velocity": 42.402553838200994,
+    "mean_max_acceleration": 10.713979291200388,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.05,
+      "action_delay_steps": 0
+    }
+  },
+  "action_delay_1": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 81000,
+    "success_rate": 0.0,
+    "crash_rate": 1.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 42.77294953626881,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.000000000000004,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 13.150000000000052,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -3376.959111811156,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.006684866598771729,
+    "mean_max_velocity": 42.77294953626881,
+    "mean_max_acceleration": 10.705188620341062,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 1
+    }
+  },
+  "action_delay_2": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 91000,
+    "success_rate": 0.0,
+    "crash_rate": 1.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 41.12407783614029,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 5.000000000000003,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 12.900000000000048,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -3234.193552765857,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.0066014021519093195,
+    "mean_max_velocity": 41.12407783614029,
+    "mean_max_acceleration": 10.584187488804346,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 2
+    }
+  },
+  "combined": {
+    "model_path": "results/reproducible/smoke_train/models/final_model.zip",
+    "n_episodes": 1,
+    "seed": 101000,
+    "success_rate": 0.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 1.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 120.76172437863644,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 16.55101603317256,
+    "std_final_velocity_error": 0.0,
+    "mean_fuel_used": 4.24562514104376,
+    "std_fuel_used": 0.0,
+    "mean_landing_time": 5.299999999999989,
+    "std_landing_time": 0.0,
+    "mean_episode_reward": -2105.5761269456966,
+    "std_episode_reward": 0.0,
+    "mean_abs_throttle_delta": 0.02762336947378658,
+    "mean_max_velocity": 24.760540381128905,
+    "mean_max_acceleration": 11.304465273351525,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "out_of_bounds": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        30.0,
+        70.0
+      ],
+      "initial_velocity_range": [
+        -3.0,
+        3.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.03,
+      "action_delay_steps": 1,
+      "dry_mass_range": [
+        9.0,
+        11.0
+      ],
+      "initial_fuel_range": [
+        4.0,
+        6.0
+      ],
+      "gravity_scale_range": [
+        0.95,
+        1.05
+      ],
+      "thrust_scale_range": [
+        0.95,
+        1.05
+      ]
+    }
+  }
+}

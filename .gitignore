@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Codex/local agent state
+.agents/
+
+# Logs and runtime artifacts
+*.log
+*.tmp
+*.bak
+*.tfevents*
+events.out.tfevents.*
+tb_logs/
+
+# Private scratch work and generated document renders
+tmp/
+
+# Large experiment outputs are reproducible and should not be committed wholesale.
+results/**
+!results/
+!results/reproducible/
+!results/reproducible/*.md
+!results/reproducible/*.json
+!results/reproducible/landing_demo.gif
+
+submission_version/results/**
+!submission_version/results/
+!submission_version/results/FINAL_STUDY_SUMMARY.md
+!submission_version/results/reports/
+!submission_version/results/reports/*.json
+
+# Generated model/output folders inside experiments.
+experiments/**/models/
+experiments/**/results/
+experiments/**/figures/
+
+# Keep the small reference model in saved_models/, but ignore ad-hoc generated
+# models elsewhere via the patterns above.

@@ -1,0 +1,9 @@
+{
+  "passed": [
+    "check_reset_reproducibility",
+    "check_action_and_fuel_constraints",
+    "check_terminal_and_reward_breakdown",
+    "check_energy_env_preserves_physics_and_reports_energy",
+    "check_energy_reward_prefers_early_coast_to_early_burn"
+  ]
+}

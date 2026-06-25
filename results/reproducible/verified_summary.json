@@ -1,0 +1,344 @@
+{
+  "main_ppo_standard_100": {
+    "success_rate": 1.0,
+    "n_episodes": 100,
+    "mean_final_velocity_error": 1.1166330911091067,
+    "mean_fuel_used": 4.455594676680397,
+    "mean_abs_throttle_delta": 0.01461034127906929,
+    "terminal_reason_counts": {
+      "success": 100
+    }
+  },
+  "safety_comparison": {
+    "without_safety": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.435122317064553,
+      "mean_abs_throttle_delta": 0.014624239668697546,
+      "mean_safety_intervention_rate": 0.0
+    },
+    "with_safety": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.437339144274594,
+      "mean_abs_throttle_delta": 0.01464654696716735,
+      "mean_safety_intervention_rate": 0.008625599373516517
+    }
+  },
+  "robustness_success_rates": {
+    "standard": 1.0,
+    "random_height": 0.48,
+    "random_velocity": 1.0,
+    "random_mass": 0.98,
+    "random_fuel": 0.2,
+    "gravity_bias": 0.98,
+    "thrust_bias": 1.0,
+    "sensor_noise": 0.9,
+    "action_delay_1": 1.0,
+    "action_delay_2": 1.0,
+    "combined": 0.4
+  },
+  "controller_comparison": {
+    "PPO": {
+      "success_rate": 1.0,
+      "mean_fuel_used": 4.391313781133853,
+      "mean_landing_time": 7.271499999999982,
+      "mean_abs_throttle_delta": 0.014755740522558965,
+      "mean_final_velocity_error": 1.1779417131283858
+    },
+    "PID": {
+      "success_rate": 1.0,
+      "mean_fuel_used": 4.238188069792226,
+      "mean_landing_time": 7.020999999999982,
+      "mean_abs_throttle_delta": 0.05636786354667236,
+      "mean_final_velocity_error": 1.6818796771156896
+    },
+    "MPC": {
+      "success_rate": 0.0,
+      "mean_fuel_used": 5.000000000000011,
+      "mean_landing_time": 8.80249999999999,
+      "mean_abs_throttle_delta": 0.014413783698775318,
+      "mean_final_velocity_error": 4.985286462290504
+    },
+    "ET-MPC": {
+      "success_rate": 0.0,
+      "mean_fuel_used": 1.8235499928519152,
+      "mean_landing_time": 4.759499999999991,
+      "mean_abs_throttle_delta": 0.00012944153142968964,
+      "mean_final_velocity_error": 19.92336669596395
+    }
+  },
+  "reward_ablation": {
+    "full": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.415750661338679,
+      "mean_final_velocity_error": 1.1561797035939587,
+      "source_model": "results\\final_report\\ablation\\full\\model.zip"
+    },
+    "no_fuel": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.415897274985909,
+      "mean_final_velocity_error": 1.2826571961609194,
+      "source_model": "results\\final_report\\ablation\\no_fuel\\model.zip"
+    },
+    "no_smooth": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.408589302822948,
+      "mean_final_velocity_error": 1.420895691324069,
+      "source_model": "results\\final_report\\ablation\\no_smooth\\model.zip"
+    },
+    "no_safety": {
+      "success_rate": 0.9,
+      "crash_rate": 0.1,
+      "mean_fuel_used": 4.399461931086455,
+      "mean_final_velocity_error": 1.5705173002199266,
+      "source_model": "results\\final_report\\ablation\\no_safety\\model.zip"
+    },
+    "no_success": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.485379916396924,
+      "mean_final_velocity_error": 1.0887479323957352,
+      "source_model": "results\\final_report\\ablation\\no_success\\model.zip"
+    },
+    "basic": {
+      "success_rate": 0.0,
+      "crash_rate": 1.0,
+      "mean_fuel_used": 5.0,
+      "mean_final_velocity_error": 28.142388502508847,
+      "source_model": "results\\final_report\\ablation\\basic\\model.zip"
+    }
+  },
+  "rl_comparison": {
+    "PPO": {
+      "success_rate": 1.0,
+      "mean_fuel_used": 4.420790456411428,
+      "mean_abs_throttle_delta": 0.014686231089685581,
+      "mean_final_velocity_error": 1.1501928772859744,
+      "source_model": "experiments\\rl_comparison\\models\\PPO\\model.zip"
+    },
+    "SAC": {
+      "success_rate": 1.0,
+      "mean_fuel_used": 3.1693530862033366,
+      "mean_abs_throttle_delta": 0.04984774773791321,
+      "mean_final_velocity_error": 1.6868915788803298,
+      "source_model": "experiments\\rl_comparison\\models\\SAC\\model.zip"
+    },
+    "TD3": {
+      "success_rate": 0.3,
+      "mean_fuel_used": 3.090407916918397,
+      "mean_abs_throttle_delta": 0.45287172699270106,
+      "mean_final_velocity_error": 2.082944431025601,
+      "source_model": "experiments\\rl_comparison\\models\\TD3\\model.zip"
+    }
+  },
+  "pure_energy_ppo": {
+    "Baseline PPO": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 4.40641551974276,
+      "mean_abs_throttle_delta": 0.014732619204422264,
+      "mean_final_velocity_error": 1.1632341887442292,
+      "terminal_reason_counts": {
+        "success": 100
+      },
+      "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+      "stats_path": null
+    },
+    "Pure Energy-Guided PPO": {
+      "success_rate": 1.0,
+      "crash_rate": 0.0,
+      "mean_fuel_used": 3.0149130225218834,
+      "mean_abs_throttle_delta": 0.040810325190563816,
+      "mean_final_velocity_error": 0.2987480866109933,
+      "terminal_reason_counts": {
+        "success": 100
+      },
+      "model_path": "results\\reproducible\\energy_ppo_from_scratch_time\\models\\pure_energy_ppo_model.zip",
+      "stats_path": "results\\reproducible\\energy_ppo_from_scratch_time\\models\\pure_energy_vec_normalize.pkl"
+    }
+  },
+  "same_seed_baseline_vs_energy_success_rates": {
+    "standard": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 1.0
+    },
+    "random_height": {
+      "Baseline PPO": 0.48,
+      "Pure Energy PPO": 1.0
+    },
+    "random_velocity": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 1.0
+    },
+    "random_mass": {
+      "Baseline PPO": 0.94,
+      "Pure Energy PPO": 1.0
+    },
+    "random_fuel": {
+      "Baseline PPO": 0.26,
+      "Pure Energy PPO": 1.0
+    },
+    "gravity_bias": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 1.0
+    },
+    "thrust_bias": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 1.0
+    },
+    "sensor_noise": {
+      "Baseline PPO": 0.84,
+      "Pure Energy PPO": 1.0
+    },
+    "action_delay_1": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 1.0
+    },
+    "action_delay_2": {
+      "Baseline PPO": 1.0,
+      "Pure Energy PPO": 0.98
+    },
+    "combined": {
+      "Baseline PPO": 0.4,
+      "Pure Energy PPO": 1.0
+    }
+  },
+  "ablation_generalization_success_rates": {
+    "full": {
+      "standard": 1.0,
+      "random_height": 0.4666666666666667,
+      "random_velocity": 1.0,
+      "random_mass": 0.8333333333333334,
+      "random_fuel": 0.26666666666666666
+    },
+    "no_fuel": {
+      "standard": 1.0,
+      "random_height": 0.3333333333333333,
+      "random_velocity": 1.0,
+      "random_mass": 0.8666666666666667,
+      "random_fuel": 0.06666666666666667
+    },
+    "no_smooth": {
+      "standard": 1.0,
+      "random_height": 0.5333333333333333,
+      "random_velocity": 1.0,
+      "random_mass": 0.9,
+      "random_fuel": 0.26666666666666666
+    },
+    "no_safety": {
+      "standard": 0.9333333333333333,
+      "random_height": 0.4,
+      "random_velocity": 0.9333333333333333,
+      "random_mass": 0.4,
+      "random_fuel": 0.1
+    },
+    "no_success": {
+      "standard": 1.0,
+      "random_height": 0.5666666666666667,
+      "random_velocity": 1.0,
+      "random_mass": 0.8,
+      "random_fuel": 0.2
+    },
+    "basic": {
+      "standard": 0.0,
+      "random_height": 0.0,
+      "random_velocity": 0.0,
+      "random_mass": 0.0,
+      "random_fuel": 0.0
+    }
+  },
+  "ablation_robustness_success_rates": {
+    "full": {
+      "standard": 1.0,
+      "gravity_bias": 1.0,
+      "thrust_bias": 1.0,
+      "sensor_noise": 0.9333333333333333,
+      "action_delay_1": 1.0,
+      "action_delay_2": 1.0,
+      "combined": 0.4666666666666667
+    },
+    "no_fuel": {
+      "standard": 1.0,
+      "gravity_bias": 0.8333333333333334,
+      "thrust_bias": 0.9666666666666667,
+      "sensor_noise": 0.8333333333333334,
+      "action_delay_1": 1.0,
+      "action_delay_2": 1.0,
+      "combined": 0.2
+    },
+    "no_smooth": {
+      "standard": 1.0,
+      "gravity_bias": 1.0,
+      "thrust_bias": 1.0,
+      "sensor_noise": 0.9,
+      "action_delay_1": 1.0,
+      "action_delay_2": 1.0,
+      "combined": 0.43333333333333335
+    },
+    "no_safety": {
+      "standard": 0.9333333333333333,
+      "gravity_bias": 0.7333333333333333,
+      "thrust_bias": 0.9333333333333333,
+      "sensor_noise": 0.7,
+      "action_delay_1": 1.0,
+      "action_delay_2": 0.8666666666666667,
+      "combined": 0.16666666666666666
+    },
+    "no_success": {
+      "standard": 1.0,
+      "gravity_bias": 0.9666666666666667,
+      "thrust_bias": 1.0,
+      "sensor_noise": 0.8666666666666667,
+      "action_delay_1": 1.0,
+      "action_delay_2": 1.0,
+      "combined": 0.43333333333333335
+    },
+    "basic": {
+      "standard": 0.0,
+      "gravity_bias": 0.0,
+      "thrust_bias": 0.0,
+      "sensor_noise": 0.0,
+      "action_delay_1": 0.0,
+      "action_delay_2": 0.0,
+      "combined": 0.0
+    }
+  },
+  "figures": {
+    "training_curves": "results\\reproducible\\figures\\training_curves.png",
+    "main_trajectory": "results\\reproducible\\baseline_existing_model_figures\\success_trajectory.png",
+    "failure_trajectory": "results\\reproducible\\failure_case_figures\\trajectory.png",
+    "main_eval_summary": "results\\reproducible\\baseline_existing_model_figures\\eval_summary.png",
+    "safety": "results\\reproducible\\figures\\safety_comparison.png",
+    "safety_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\safety_trajectory_comparison.png",
+    "robustness": "results\\reproducible\\figures\\robustness_results.png",
+    "robustness_all_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\robustness_all_scenarios_trajectory_comparison.png",
+    "robustness_initial_conditions": "results\\reproducible\\trajectory_comparisons\\robustness_initial_conditions.png",
+    "robustness_physics_disturbance": "results\\reproducible\\trajectory_comparisons\\robustness_physics_disturbance.png",
+    "robustness_noise_delay": "results\\reproducible\\trajectory_comparisons\\robustness_noise_delay.png",
+    "robustness_combined": "results\\reproducible\\trajectory_comparisons\\robustness_combined.png",
+    "generalization_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\generalization_trajectory_comparison.png",
+    "controller": "results\\reproducible\\figures\\controller_comparison.png",
+    "controller_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\controller_trajectory_comparison.png",
+    "ablation": "results\\reproducible\\figures\\reward_ablation.png",
+    "ablation_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\ablation_trajectory_comparison.png",
+    "ablation_generalization_heatmap": "results\\reproducible\\ablation_scenarios\\ablation_generalization_success_heatmap.png",
+    "ablation_robustness_heatmap": "results\\reproducible\\ablation_scenarios\\ablation_robustness_success_heatmap.png",
+    "ablation_generalization_full_trajectory": "results\\reproducible\\trajectory_comparisons\\ablation_scenarios\\generalization_full_scenario_trajectory_comparison.png",
+    "ablation_robustness_full_trajectory": "results\\reproducible\\trajectory_comparisons\\ablation_scenarios\\robustness_full_scenario_trajectory_comparison.png",
+    "ablation_generalization_random_fuel_by_mode": "results\\reproducible\\trajectory_comparisons\\ablation_scenarios\\generalization_random_fuel_ablation_trajectory_comparison.png",
+    "ablation_robustness_combined_by_mode": "results\\reproducible\\trajectory_comparisons\\ablation_scenarios\\robustness_combined_ablation_trajectory_comparison.png",
+    "rl_comparison": "results\\reproducible\\figures\\rl_comparison.png",
+    "rl_algorithm_trajectory_comparison": "results\\reproducible\\trajectory_comparisons\\rl_algorithm_trajectory_comparison.png",
+    "pure_energy_accounting": "results\\reproducible\\energy_ppo_from_scratch_time\\pure_energy_accounting.png",
+    "pure_energy_reward_breakdown": "results\\reproducible\\energy_ppo_from_scratch_time\\pure_energy_reward_breakdown.png",
+    "baseline_vs_pure_energy_trajectory": "results\\reproducible\\energy_ppo_from_scratch_time\\baseline_vs_pure_energy_trajectory.png",
+    "baseline_vs_pure_energy_metrics": "results\\reproducible\\energy_ppo_from_scratch_time\\baseline_vs_pure_energy_metrics.png",
+    "same_seed_scenario_comparison": "results\\reproducible\\energy_ppo_from_scratch_time\\scenarios\\standard_comparison\\scenario_comparison_metrics.png",
+    "same_seed_random_height_trajectory": "results\\reproducible\\energy_ppo_from_scratch_time\\scenarios\\standard_comparison\\trajectory_comparisons\\random_height_trajectory_comparison.png",
+    "demo_animation": "results\\reproducible\\landing_demo.gif"
+  }
+}

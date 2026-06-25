@@ -1,0 +1,30 @@
+# Stable-Baselines3 PPO 超参数配置
+# 针对带有延迟和噪声的物理环境优化
+
+algorithm: PPO
+policy: MlpPolicy
+
+# 训练步数与批次
+n_steps: 4096        # 增大步数以应对环境延迟，获取更长序列
+batch_size: 64       # 批量大小
+n_epochs: 10         # 每个更新迭代的 epoch 数
+
+# 学习率配置 (使用线性衰减)
+learning_rate: &lr 3.0e-4
+lr_schedule: linear
+
+# 网络结构
+policy_kwargs:
+  net_arch: [256, 256, 256]  # 三层全连接，增加容量以拟合非线性动力学
+
+# 奖励折现与裁剪
+gamma: 0.99
+clip_range: 0.2
+clip_range_vf: null
+ent_coef: 0.01       # 熵系数，鼓励探索
+vf_coef: 0.5         # 价值损失权重
+max_grad_norm: 0.5   # 梯度裁剪，防止训练不稳定
+
+# 其他
+verbose: 1
+seed: 42

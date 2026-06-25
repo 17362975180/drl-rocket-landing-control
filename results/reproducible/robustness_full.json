@@ -1,0 +1,546 @@
+{
+  "standard": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 1000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.2193274862861319,
+    "std_final_velocity_error": 0.21181339066898716,
+    "mean_fuel_used": 4.347077635542489,
+    "std_fuel_used": 0.2201100165037971,
+    "mean_landing_time": 7.183999999999982,
+    "std_landing_time": 0.4053936358651907,
+    "mean_episode_reward": 1256.9787448724344,
+    "std_episode_reward": 27.834614863465767,
+    "mean_abs_throttle_delta": 0.014867352769535675,
+    "mean_max_velocity": 15.60569058841886,
+    "mean_max_acceleration": 9.809984963785547,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_height": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 11000,
+    "success_rate": 0.48,
+    "crash_rate": 0.52,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 2.3715245000575442,
+    "std_final_velocity_error": 1.3259375558656177,
+    "mean_fuel_used": 4.320431300955825,
+    "std_fuel_used": 0.7316656917542178,
+    "mean_landing_time": 7.288999999999986,
+    "std_landing_time": 1.4172963698535315,
+    "mean_episode_reward": 71.40463557629617,
+    "std_episode_reward": 1136.1300000882684,
+    "mean_abs_throttle_delta": 0.01731276212702448,
+    "mean_max_velocity": 15.835879166984618,
+    "mean_max_acceleration": 9.809965656021909,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 24,
+      "crash": 26
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        30.0,
+        70.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_velocity": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 21000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.0702730586546323,
+    "std_final_velocity_error": 0.21853243250481202,
+    "mean_fuel_used": 4.502864083355292,
+    "std_fuel_used": 0.22588715725347835,
+    "mean_landing_time": 7.454999999999981,
+    "std_landing_time": 0.5105144464165529,
+    "mean_episode_reward": 1235.686672680965,
+    "std_episode_reward": 34.700375269386335,
+    "mean_abs_throttle_delta": 0.014573508806581639,
+    "mean_max_velocity": 16.01731678480794,
+    "mean_max_acceleration": 9.809461158291768,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -5.0,
+        5.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0
+    }
+  },
+  "random_mass": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 31000,
+    "success_rate": 0.98,
+    "crash_rate": 0.02,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.4098526304393164,
+    "std_final_velocity_error": 0.46325663594400873,
+    "mean_fuel_used": 4.224313390931115,
+    "std_fuel_used": 0.4458413059673192,
+    "mean_landing_time": 7.173999999999982,
+    "std_landing_time": 0.4040099008687769,
+    "mean_episode_reward": 1199.9469014097406,
+    "std_episode_reward": 316.1074517702451,
+    "mean_abs_throttle_delta": 0.014702687666250101,
+    "mean_max_velocity": 15.62847958543877,
+    "mean_max_acceleration": 9.810077717841603,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 49,
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "dry_mass_range": [
+        8.0,
+        12.0
+      ]
+    }
+  },
+  "random_fuel": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 41000,
+    "success_rate": 0.2,
+    "crash_rate": 0.8,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 4.089944073238155,
+    "std_final_velocity_error": 2.734322127690981,
+    "mean_fuel_used": 3.9995184217178275,
+    "std_fuel_used": 0.35400984737530544,
+    "mean_landing_time": 6.761999999999984,
+    "std_landing_time": 0.9005864755813264,
+    "mean_episode_reward": -561.0153902473621,
+    "std_episode_reward": 918.238944107016,
+    "mean_abs_throttle_delta": 0.019304248738865794,
+    "mean_max_velocity": 15.954577488538778,
+    "mean_max_acceleration": 9.809900562555574,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 40,
+      "success": 10
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "initial_fuel_range": [
+        3.0,
+        7.0
+      ]
+    }
+  },
+  "gravity_bias": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 51000,
+    "success_rate": 0.98,
+    "crash_rate": 0.02,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.30190168817346,
+    "std_final_velocity_error": 0.31320604807791697,
+    "mean_fuel_used": 4.30860134190321,
+    "std_fuel_used": 0.3595933194122992,
+    "mean_landing_time": 7.170999999999983,
+    "std_landing_time": 0.407073703400255,
+    "mean_episode_reward": 1205.5775433399256,
+    "std_episode_reward": 316.9727321448887,
+    "mean_abs_throttle_delta": 0.014907755529222617,
+    "mean_max_velocity": 15.554945753138847,
+    "mean_max_acceleration": 9.736362793708972,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 49,
+      "crash": 1
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "gravity_scale_range": [
+        0.9,
+        1.1
+      ]
+    }
+  },
+  "thrust_bias": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 61000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.1238624159042943,
+    "std_final_velocity_error": 0.24962563288438783,
+    "mean_fuel_used": 4.440372103661584,
+    "std_fuel_used": 0.2263675962883978,
+    "mean_landing_time": 7.364999999999982,
+    "std_landing_time": 0.42464691215172995,
+    "mean_episode_reward": 1233.6513676178122,
+    "std_episode_reward": 31.322156749063982,
+    "mean_abs_throttle_delta": 0.014549145767381224,
+    "mean_max_velocity": 15.805387745801,
+    "mean_max_acceleration": 9.810036003915435,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 0,
+      "thrust_scale_range": [
+        0.9,
+        1.1
+      ]
+    }
+  },
+  "sensor_noise": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 71000,
+    "success_rate": 0.9,
+    "crash_rate": 0.1,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.3233053353949455,
+    "std_final_velocity_error": 0.44767319839097325,
+    "mean_fuel_used": 4.418874337173068,
+    "std_fuel_used": 0.248144763790007,
+    "mean_landing_time": 7.346999999999981,
+    "std_landing_time": 0.4675906329258523,
+    "mean_episode_reward": 980.8207467018983,
+    "std_episode_reward": 672.4783401964053,
+    "mean_abs_throttle_delta": 0.53427323973515,
+    "mean_max_velocity": 15.927566382375506,
+    "mean_max_acceleration": 16.902402010148215,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 45,
+      "crash": 5
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.05,
+      "action_delay_steps": 0
+    }
+  },
+  "action_delay_1": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 81000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.0757147414593526,
+    "std_final_velocity_error": 0.21603673232492568,
+    "mean_fuel_used": 4.492576710736379,
+    "std_fuel_used": 0.22367202564177763,
+    "mean_landing_time": 7.448999999999981,
+    "std_landing_time": 0.4365191862908191,
+    "mean_episode_reward": 1235.9940562158563,
+    "std_episode_reward": 30.04656629111451,
+    "mean_abs_throttle_delta": 0.015339290031468684,
+    "mean_max_velocity": 16.16127320453108,
+    "mean_max_acceleration": 9.80994727378745,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 1
+    }
+  },
+  "action_delay_2": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 91000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.0220451498203438,
+    "std_final_velocity_error": 0.21076038451668905,
+    "mean_fuel_used": 4.542946842731909,
+    "std_fuel_used": 0.21799897290799097,
+    "mean_landing_time": 7.540999999999982,
+    "std_landing_time": 0.42363781700882114,
+    "mean_episode_reward": 1226.8840283388395,
+    "std_episode_reward": 29.15081908965804,
+    "mean_abs_throttle_delta": 0.0179748529884043,
+    "mean_max_velocity": 16.555857145031172,
+    "mean_max_acceleration": 9.810001986986485,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 50
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        45.0,
+        55.0
+      ],
+      "initial_velocity_range": [
+        -1.0,
+        1.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.0,
+      "action_delay_steps": 2
+    }
+  },
+  "combined": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 50,
+    "seed": 101000,
+    "success_rate": 0.4,
+    "crash_rate": 0.6,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 3.4977842823451493,
+    "std_final_velocity_error": 2.7572102672815157,
+    "mean_fuel_used": 4.265152472298872,
+    "std_fuel_used": 0.6424377427262083,
+    "mean_landing_time": 7.217999999999984,
+    "std_landing_time": 1.1849371291338606,
+    "mean_episode_reward": -148.65706817951607,
+    "std_episode_reward": 1113.888998429837,
+    "mean_abs_throttle_delta": 0.3016160944241384,
+    "mean_max_velocity": 16.386160735239148,
+    "mean_max_acceleration": 14.455612923312323,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "crash": 30,
+      "success": 20
+    },
+    "reset_options": {
+      "randomize": true,
+      "initial_height_range": [
+        30.0,
+        70.0
+      ],
+      "initial_velocity_range": [
+        -3.0,
+        3.0
+      ],
+      "dry_mass": 10.0,
+      "initial_fuel": 5.0,
+      "gravity_scale": 1.0,
+      "thrust_scale": 1.0,
+      "sensor_noise": 0.03,
+      "action_delay_steps": 1,
+      "dry_mass_range": [
+        9.0,
+        11.0
+      ],
+      "initial_fuel_range": [
+        4.0,
+        6.0
+      ],
+      "gravity_scale_range": [
+        0.95,
+        1.05
+      ],
+      "thrust_scale_range": [
+        0.95,
+        1.05
+      ]
+    }
+  }
+}
