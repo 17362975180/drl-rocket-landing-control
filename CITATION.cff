@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it using the metadata below."
+title: "DRL Rocket Landing Control"
+authors:
+  - name: "ycy"
+date-released: "2026-06-25"
+license: MIT
+abstract: "Deep reinforcement learning project for one-dimensional vertical rocket soft landing with PPO, energy-aware rewards, robustness evaluation, and controller baselines."

@@ -20,18 +20,18 @@ for robustness, reward ablation, and controller comparison.
 
 ```text
 .
-├── envs/                         # Rocket landing environments
-├── configs/                      # PPO configuration files
-├── experiments/                  # Experiment entry points
-├── saved_models/                 # Small reference PPO model and normalization stats
-├── results/reproducible/         # Lightweight verified summaries
-├── submission_version/           # Final course-submission snapshot and report
-├── train.py                      # PPO training entry point
-├── evaluate.py                   # Single-model evaluation
-├── robustness_full_test.py       # Multi-scenario robustness evaluation
-├── run_full_comparison.py        # Full comparison workflow
-├── smoke_tests.py                # Fast environment and physics checks
-└── verify_reproducible_outputs.py
+|-- envs/                         # Rocket landing environments
+|-- configs/                      # PPO configuration files
+|-- experiments/                  # Experiment entry points
+|-- saved_models/                 # Small reference PPO model and normalization stats
+|-- results/reproducible/         # Lightweight verified summaries
+|-- submission_version/           # Final course-submission snapshot and report
+|-- train.py                      # PPO training entry point
+|-- evaluate.py                   # Single-model evaluation
+|-- robustness_full_test.py       # Multi-scenario robustness evaluation
+|-- run_full_comparison.py        # Full comparison workflow
+|-- smoke_tests.py                # Fast environment and physics checks
+`-- verify_reproducible_outputs.py
 ```
 
 The local workspace may contain `tmp/`, `.venv/`, full `results/`, TensorBoard
