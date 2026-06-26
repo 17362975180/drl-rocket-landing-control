@@ -29,5 +29,5 @@ python smoke_tests.py
 - Run `python smoke_tests.py` before opening a pull request.
 - If model behavior changes, document the command, seed, and evaluation
   protocol used to produce the result.
-- Do not commit local virtual environments, scratch files, rendered resumes, or
+- Do not commit local virtual environments, scratch files, private notes, or
   private documents.

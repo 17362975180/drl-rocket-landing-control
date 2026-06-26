@@ -20,6 +20,9 @@ env/
 *.swo
 .DS_Store
 Thumbs.db
+.env
+.env.*
+!.env.example
 
 # Codex/local agent state
 .agents/
@@ -31,6 +34,8 @@ Thumbs.db
 *.tfevents*
 events.out.tfevents.*
 tb_logs/
+wandb/
+mlruns/
 
 # Private scratch work and generated document renders
 tmp/
@@ -53,6 +58,12 @@ submission_version/results/**
 experiments/**/models/
 experiments/**/results/
 experiments/**/figures/
+experiments/**/*.zip
+experiments/**/*.pkl
+experiments/**/*.pt
+experiments/**/*.pth
+experiments/**/*.onnx
+experiments/**/*.npz
 
 # Keep the small reference model in saved_models/, but ignore ad-hoc generated
 # models elsewhere via the patterns above.

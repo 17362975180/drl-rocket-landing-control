@@ -5,6 +5,14 @@ landing. The project trains and evaluates PPO-based controllers, compares them
 with classical control baselines, and includes reproducible evaluation scripts
 for robustness, reward ablation, and controller comparison.
 
+## Project Status
+
+This repository is prepared for public release as a compact research/code
+artifact. It includes runnable source code, a small reference PPO checkpoint,
+selected verified summaries, the final course-submission snapshot, and a
+reproducibility report. Large regenerated experiment folders and local scratch
+files are intentionally excluded from version control.
+
 ## Highlights
 
 - Gymnasium environments for rocket dynamics, fuel limits, thrust inertia, drag,
@@ -38,6 +46,21 @@ The local workspace may contain `tmp/`, `.venv/`, full `results/`, TensorBoard
 logs, rendered documents, and large JSON trajectory dumps. These are ignored so
 the GitHub repository stays clean and reproducible.
 
+## Included Artifacts
+
+The public repository keeps a lightweight set of artifacts:
+
+- `saved_models/ppo_rocket_v7.zip`
+- `saved_models/vec_normalize_stats_v7.pkl`
+- `results/reproducible/*.json`
+- `results/reproducible/VERIFIED_RESULTS.md`
+- `results/reproducible/landing_demo.gif`
+- `submission_version/report/深度强化学习报告.pdf`
+- `submission_version/report/深度强化学习报告.docx`
+
+Full regenerated experiment folders are not tracked. Re-run the relevant
+scripts to recreate them locally.
+
 ## Installation
 
 Python 3.10 or 3.11 is recommended. PyTorch and Stable-Baselines3 compatibility
@@ -68,9 +91,10 @@ python smoke_tests.py
 ```
 
 The full reproducibility verifier checks generated artifacts under `results/`.
-It passes in the complete local research workspace, but a fresh GitHub clone only
-contains lightweight summaries. After regenerating or restoring the full result
-artifacts, run:
+It is meant for the complete local research workspace; a fresh GitHub clone only
+contains lightweight summaries and will not include every generated figure,
+training run, and trajectory file. After regenerating or restoring the full
+result artifacts, run:
 
 ```bash
 python verify_reproducible_outputs.py
@@ -123,6 +147,11 @@ The final course report is stored in:
 ## AI Usage
 
 AI-assisted development and review notes are documented in `AI_USAGE.md`.
+
+## Release Notes
+
+The release preparation checklist and GitHub publishing commands are documented
+in `docs/OPEN_SOURCE_RELEASE.md`.
 
 ## License
 
