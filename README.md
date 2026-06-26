@@ -1,9 +1,27 @@
 # DRL Rocket Landing Control
 
+[![CI](https://github.com/17362975180/drl-rocket-landing-control/actions/workflows/ci.yml/badge.svg)](https://github.com/17362975180/drl-rocket-landing-control/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue.svg)](requirements.txt)
+[![Gymnasium](https://img.shields.io/badge/Gymnasium-Rocket%20Landing-green.svg)](envs/rocket_env.py)
+
 Deep reinforcement learning project for one-dimensional vertical rocket soft
 landing. The project trains and evaluates PPO-based controllers, compares them
 with classical control baselines, and includes reproducible evaluation scripts
 for robustness, reward ablation, and controller comparison.
+
+![Rocket landing demo](results/reproducible/landing_demo.gif)
+
+## Why This Project Is Interesting
+
+- A compact rocket soft-landing benchmark that is easy to inspect, modify, and
+  run locally.
+- Physics constraints are explicit: fuel depletion, thrust lag, drag, mass
+  changes, action delay, sensor noise, and safety shielding.
+- The repository compares learned controllers with PID, MPC, event-triggered
+  MPC, SAC, and TD3 baselines instead of showing only one successful run.
+- Reproducibility artifacts are kept small enough for GitHub while still giving
+  readers concrete metrics and trajectories to inspect.
 
 ## Project Status
 
@@ -23,6 +41,20 @@ files are intentionally excluded from version control.
 - Baseline comparisons against PID, MPC, event-triggered MPC, SAC, and TD3.
 - Lightweight verified summaries are kept in the repository; large generated
   experiment artifacts are intentionally excluded from Git.
+
+## Key Results
+
+Representative verified results from the public artifacts:
+
+| Evaluation | Result |
+| --- | --- |
+| Standard PPO quick reference model | Included in `saved_models/ppo_rocket_v7.zip` |
+| Fast smoke checks | Seed reproducibility, fuel constraints, terminal rewards, energy reward behavior |
+| Robustness protocol | 11 standard/generalization/disturbance scenarios |
+| Public demo | `results/reproducible/landing_demo.gif` |
+
+For the full experimental narrative, see `REPORT_REPRODUCIBLE.md` and
+`results/reproducible/VERIFIED_RESULTS.md`.
 
 ## Repository Layout
 
@@ -90,6 +122,12 @@ Run the fast smoke tests:
 python smoke_tests.py
 ```
 
+Run a quick evaluation with the included reference model:
+
+```bash
+python quick_eval.py --model saved_models/ppo_rocket_v7.zip --n-episodes 10
+```
+
 The full reproducibility verifier checks generated artifacts under `results/`.
 It is meant for the complete local research workspace; a fresh GitHub clone only
 contains lightweight summaries and will not include every generated figure,
@@ -106,12 +144,6 @@ Train a PPO landing controller:
 
 ```bash
 python train.py --run-name main --total-steps 500000 --eval-interval 10000 --eval-episodes 20
-```
-
-Run a quick evaluation with the included reference model:
-
-```bash
-python quick_eval.py --model saved_models/ppo_rocket_v7.zip --n-episodes 10
 ```
 
 Run the formal 100-episode evaluation:
@@ -147,6 +179,12 @@ The final course report is stored in:
 ## AI Usage
 
 AI-assisted development and review notes are documented in `AI_USAGE.md`.
+
+## Roadmap
+
+Planned improvements are tracked in `docs/ROADMAP.md`. The most useful next
+upgrades are packaging the environment as an installable Gymnasium environment,
+adding a notebook tutorial, and publishing richer benchmark tables.
 
 ## Release Notes
 
