@@ -41,10 +41,17 @@ After authenticating with GitHub CLI:
 
 ```powershell
 gh auth login
-gh repo create drl-rocket-landing-control --public --source . --remote origin --push --description "Deep reinforcement learning controllers for 1D rocket soft landing"
+.\scripts\publish_github.ps1
 ```
 
-If the repository already exists, connect it manually:
+The script creates a public repository named `drl-rocket-landing-control`, adds
+`origin`, and pushes the current branch. To use a different name:
+
+```powershell
+.\scripts\publish_github.ps1 -RepoName your-repo-name
+```
+
+If the repository already exists and you want to connect it manually:
 
 ```powershell
 git remote add origin https://github.com/<owner>/drl-rocket-landing-control.git
