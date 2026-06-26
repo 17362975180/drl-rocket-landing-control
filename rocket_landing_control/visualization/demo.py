@@ -3,8 +3,8 @@
 demo.py - 生成火箭着陆动画 demo.mp4
 
 用法:
-    python demo.py --model saved_models/ppo_rocket_v7.zip --output results/demo.mp4
-    python demo.py --model results/sweeps/progress_v18/models/final_model.zip --episodes 3
+    python -m rocket_landing_control.visualization.demo --model saved_models/ppo_rocket_v7.zip --output results/demo.mp4
+    python -m rocket_landing_control.visualization.demo --model results/sweeps/progress_v18/models/final_model.zip --episodes 3
 """
 import argparse
 import json
@@ -17,7 +17,7 @@ from pathlib import Path
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
 
 
 def create_env():

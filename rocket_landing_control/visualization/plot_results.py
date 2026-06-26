@@ -3,8 +3,8 @@ plot_results.py - 可视化脚本
 生成训练曲线、轨迹图、h-v相图等。
 
 用法:
-    python plot_results.py --result-dir results/sweeps/lr3e4_s42
-    python plot_results.py --eval-dir results/final_eval
+    python -m rocket_landing_control.visualization.plot_results --result-dir results/sweeps/lr3e4_s42
+    python -m rocket_landing_control.visualization.plot_results --eval-dir results/final_eval
 """
 import os
 import sys

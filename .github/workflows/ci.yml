@@ -36,4 +36,4 @@ jobs:
         run: python -m compileall -q -x '(^|/)(\.venv|tmp|__pycache__|\.git)(/|$)' .
 
       - name: Run smoke tests
-        run: python smoke_tests.py
+        run: python -m rocket_landing_control.workflows.smoke_tests

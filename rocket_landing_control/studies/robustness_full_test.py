@@ -22,18 +22,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 from stable_baselines3 import PPO, SAC, TD3
 
-from controller_comparison_full import EventTriggeredMPCController, MPCController, PIDController, rollout_controller
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_energy import RocketLandingEnergyEnv
-from envs.rocket_env_safe import RocketLandingEnvSafe
-from experiment_utils import (
+from rocket_landing_control.studies.controller_comparison_full import EventTriggeredMPCController, MPCController, PIDController, rollout_controller
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
+from rocket_landing_control.envs.rocket_env_safe import RocketLandingEnvSafe
+from rocket_landing_control.core.experiment_utils import (
     ROBUSTNESS_SCENARIOS,
     auto_find_stats,
     evaluate_model_rollouts,
     load_obs_rms,
     summarize_rollouts,
 )
-from generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
+from rocket_landing_control.visualization.generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
 
 
 SB3_ALGORITHMS = {"PPO": PPO, "SAC": SAC, "TD3": TD3}

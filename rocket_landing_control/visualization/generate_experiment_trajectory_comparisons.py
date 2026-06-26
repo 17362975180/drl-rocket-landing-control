@@ -13,9 +13,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from stable_baselines3 import PPO, SAC, TD3
 
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_safe import RocketLandingEnvSafe
-from experiment_utils import ROBUSTNESS_SCENARIOS, auto_find_stats, load_obs_rms, rollout_model
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_safe import RocketLandingEnvSafe
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS, auto_find_stats, load_obs_rms, rollout_model
 
 
 PPO_MODEL = "results/sweeps/v2_reward/models/final_model.zip"

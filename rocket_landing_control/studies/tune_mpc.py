@@ -11,15 +11,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from controller_comparison_full import (
+from rocket_landing_control.studies.controller_comparison_full import (
     EventTriggeredMPCController,
     MPCController,
     PIDController,
     rollout_controller,
 )
-from envs.rocket_env import RocketLandingEnv
-from experiment_utils import ROBUSTNESS_SCENARIOS, load_obs_rms, normalize_obs
-from generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS, load_obs_rms, normalize_obs
+from rocket_landing_control.visualization.generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
 from stable_baselines3 import PPO
 
 OUTPUT_DIR = Path("results/reproducible/final_comparison/mpc_tuning")
@@ -163,8 +163,8 @@ def main():
     energy_model = PPO.load("results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip", device="cpu")
     energy_rms = load_obs_rms("results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl")
 
-    from envs.rocket_env_energy import RocketLandingEnergyEnv
-    from experiment_utils import evaluate_model_rollouts, summarize_rollouts
+    from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
+    from rocket_landing_control.core.experiment_utils import evaluate_model_rollouts, summarize_rollouts
 
     for label, model, rms, env_factory in [
         ("Baseline PPO", ppo_model, ppo_rms, RocketLandingEnv),

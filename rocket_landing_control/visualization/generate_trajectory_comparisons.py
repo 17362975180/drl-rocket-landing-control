@@ -18,8 +18,8 @@ import pickle
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from stable_baselines3 import PPO
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_safe import RocketLandingEnvSafe
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_safe import RocketLandingEnvSafe
 
 plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False

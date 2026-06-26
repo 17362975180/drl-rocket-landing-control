@@ -23,7 +23,7 @@ release.
 Run these commands before pushing a release branch:
 
 ```powershell
-.\.venv\Scripts\python.exe smoke_tests.py
+.\.venv\Scripts\python.exe -m rocket_landing_control.workflows.smoke_tests
 py -3.10 -m compileall -q -x "(.venv|tmp|__pycache__|\\.git)" .
 git status --short
 ```
@@ -32,7 +32,7 @@ The full reproducibility verifier requires regenerated local experiment outputs
 that are intentionally not all committed to GitHub:
 
 ```powershell
-.\.venv\Scripts\python.exe verify_reproducible_outputs.py
+.\.venv\Scripts\python.exe -m rocket_landing_control.workflows.verify_reproducible_outputs
 ```
 
 ## Publishing With GitHub CLI

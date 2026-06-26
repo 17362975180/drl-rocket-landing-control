@@ -12,8 +12,8 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from envs.rocket_env import RocketLandingEnv
-from experiment_utils import STANDARD_EVAL_OPTIONS, evaluate_model_rollouts, summarize_rollouts
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.core.experiment_utils import STANDARD_EVAL_OPTIONS, evaluate_model_rollouts, summarize_rollouts
 
 
 class QuickEvalCallback(BaseCallback):

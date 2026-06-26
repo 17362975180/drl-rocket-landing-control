@@ -6,7 +6,7 @@ import csv
 import json
 from pathlib import Path
 
-from experiment_utils import ROBUSTNESS_SCENARIOS
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS
 
 
 ROOT = Path("results/reproducible")

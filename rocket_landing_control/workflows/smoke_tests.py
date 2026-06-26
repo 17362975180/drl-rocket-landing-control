@@ -7,9 +7,9 @@ from pathlib import Path
 
 import numpy as np
 
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_energy import RocketLandingEnergyEnv
-from experiment_utils import STANDARD_EVAL_OPTIONS
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
+from rocket_landing_control.core.experiment_utils import STANDARD_EVAL_OPTIONS
 
 
 def check_reset_reproducibility():

@@ -45,7 +45,8 @@ def main():
         "Experiment 1: PPO main evaluation",
         [
             sys.executable,
-            "evaluate.py",
+            "-m",
+            "rocket_landing_control.workflows.evaluate",
             "--model",
             args.model,
             *stats_args,
@@ -62,7 +63,8 @@ def main():
         "Experiment 2: safety shield comparison",
         [
             sys.executable,
-            "test_safety_mechanism.py",
+            "-m",
+            "rocket_landing_control.studies.test_safety_mechanism",
             "--model",
             args.model,
             *stats_args,
@@ -78,7 +80,8 @@ def main():
         "Experiment 3: robustness",
         [
             sys.executable,
-            "robustness_full_test.py",
+            "-m",
+            "rocket_landing_control.studies.robustness_full_test",
             "--model",
             args.model,
             *stats_args,
@@ -94,7 +97,8 @@ def main():
         "Experiment 4: controller comparison",
         [
             sys.executable,
-            "controller_comparison_full.py",
+            "-m",
+            "rocket_landing_control.studies.controller_comparison_full",
             "--model",
             args.model,
             *stats_args,
@@ -112,7 +116,8 @@ def main():
             "Experiment 5: reward ablation",
             [
                 sys.executable,
-                "reward_ablation.py",
+                "-m",
+                "rocket_landing_control.studies.reward_ablation",
                 "--output-dir",
                 str(out / "ablation"),
                 "--train-steps",
@@ -126,7 +131,8 @@ def main():
             "Experiment 6: PPO/SAC/TD3 comparison",
             [
                 sys.executable,
-                "rl_comparison.py",
+                "-m",
+                "rocket_landing_control.studies.rl_comparison",
                 "--output-dir",
                 str(out / "rl_comparison"),
                 "--train-steps",
@@ -139,7 +145,8 @@ def main():
         "Generate main figures",
         [
             sys.executable,
-            "plot_results.py",
+            "-m",
+            "rocket_landing_control.visualization.plot_results",
             "--result-dir",
             str(out / "figures"),
             "--eval-dir",

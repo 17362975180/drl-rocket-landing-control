@@ -11,7 +11,7 @@ sys.path.insert(0, str(project_root))
 
 from stable_baselines3 import SAC, TD3
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
-from envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
 
 
 def train_algorithm(algorithm_name, total_timesteps=200000):

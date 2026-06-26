@@ -78,8 +78,8 @@
 
 以下代码模块可以由本人完整解释：
 
-1. **火箭动力学模型** (`envs/rocket_env.py`): 一维垂直着陆的物理方程
-2. **奖励函数设计** (`envs/rocket_env.py`): 多目标奖励的权重和逻辑
+1. **火箭动力学模型** (`rocket_landing_control/envs/rocket_env.py`): 一维垂直着陆的物理方程
+2. **奖励函数设计** (`rocket_landing_control/envs/rocket_env.py`): 多目标奖励的权重和逻辑
 3. **PPO算法参数** (`train.py`): 学习率、折扣因子、裁剪范围等
 4. **自动训练调度** (`auto_sweep.py`): 并行训练、评估、早停的流程
 5. **评估指标计算** (`evaluate.py`): 成功率、速度误差、燃料消耗等

@@ -4,7 +4,7 @@ Describe the change.
 
 ## Validation
 
-- [ ] `python smoke_tests.py`
+- [ ] `python -m rocket_landing_control.workflows.smoke_tests`
 - [ ] Relevant training/evaluation command documented, if model behavior changed
 
 ## Notes

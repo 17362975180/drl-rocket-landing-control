@@ -15,8 +15,8 @@ import numpy as np
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from experiment_utils import ROBUSTNESS_SCENARIOS, evaluate_model_rollouts, summarize_rollouts
-from reward_ablation import ABLATION_MODES, RocketLandingEnvAblation
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS, evaluate_model_rollouts, summarize_rollouts
+from rocket_landing_control.studies.reward_ablation import ABLATION_MODES, RocketLandingEnvAblation
 
 
 GENERALIZATION_SCENARIOS = {

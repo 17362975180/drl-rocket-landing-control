@@ -1,11 +1,11 @@
 """Safety-shielded variant — backward-compatible wrapper.
 
-This file is kept so that existing ``from envs.rocket_env_safe import
+This file is kept so that existing ``from rocket_landing_control.envs.rocket_env_safe import
 RocketLandingEnvSafe`` imports continue to work without changes.
 The actual implementation lives in :class:`envs.rocket_env.RocketLandingEnv`.
 """
 
-from envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
 
 
 class RocketLandingEnvSafe(RocketLandingEnv):

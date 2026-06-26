@@ -18,7 +18,7 @@ sys.path.insert(0, str(project_root))
 
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
-from envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
 
 plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False

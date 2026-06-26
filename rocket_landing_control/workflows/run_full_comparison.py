@@ -20,8 +20,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from experiment_utils import ROBUSTNESS_SCENARIOS
-from generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS
+from rocket_landing_control.visualization.generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
 
 OUTPUT_DIR = Path("results/reproducible/final_comparison")
 SCENARIOS = list(ROBUSTNESS_SCENARIOS.keys())

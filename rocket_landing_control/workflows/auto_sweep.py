@@ -3,8 +3,8 @@ auto_sweep.py - 自动训练调度器
 并行训练多个PPO候选配置，定期快速评估，自动淘汰，最终选出最优模型。
 
 用法:
-    python auto_sweep.py --max-parallel 2 --scout-steps 30000 --promote-steps 150000
-    python auto_sweep.py --dry-run  # 只打印配置，不训练
+    python -m rocket_landing_control.workflows.auto_sweep --max-parallel 2 --scout-steps 30000 --promote-steps 150000
+    python -m rocket_landing_control.workflows.auto_sweep --dry-run  # 只打印配置，不训练
 """
 import os
 import sys
@@ -173,7 +173,7 @@ def is_best_model(eval_history):
 def run_training(config, total_steps, eval_interval, eval_episodes, output_dir):
     """启动一个训练子进程"""
     cmd = [
-        sys.executable, "train.py",
+        sys.executable, "-m", "rocket_landing_control.workflows.train",
         "--run-name", config["name"],
         "--total-steps", str(total_steps),
         "--eval-interval", str(eval_interval),
@@ -606,7 +606,7 @@ def main():
                 if os.path.exists(scout_model_path):
                     # 继续训练：加载模型
                     cmd = [
-                        sys.executable, "train.py",
+                        sys.executable, "-m", "rocket_landing_control.workflows.train",
                         "--run-name", f"{name}_promote",
                         "--total-steps", str(promote_total - scout_done),
                         "--eval-interval", str(args.promote_eval_interval),
@@ -732,9 +732,15 @@ def main():
         print(f"     Run: {best_model_info['run_name']}")
         print(f"     Success rate: {best_model_info['success_rate']:.1%}")
         print(f"\n  Next steps:")
-        print(f"     python evaluate.py --model {best_model_info['output_dir']}/models/final_model.zip --n-episodes 100")
-        print(f"     python robustness_test.py --model {best_model_info['output_dir']}/models/final_model.zip")
-        print(f"     python plot_results.py --result-dir {best_model_info['output_dir']}")
+        print(
+            f"     python -m rocket_landing_control.workflows.evaluate "
+            f"--model {best_model_info['output_dir']}/models/final_model.zip --n-episodes 100"
+        )
+        print(
+            f"     python -m rocket_landing_control.studies.robustness_full_test "
+            f"--model {best_model_info['output_dir']}/models/final_model.zip"
+        )
+        print(f"     python -m rocket_landing_control.visualization.plot_results --result-dir {best_model_info['output_dir']}")
     else:
         print("\n  ⚠️ No best model found. Consider running more training.")
 

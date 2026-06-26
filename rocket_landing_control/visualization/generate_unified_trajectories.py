@@ -16,17 +16,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 from stable_baselines3 import PPO, SAC, TD3
 
-from controller_comparison_full import (
+from rocket_landing_control.studies.controller_comparison_full import (
     EventTriggeredMPCController,
     MPCController,
     PIDController,
     rollout_controller,
 )
-from tune_mpc import TunedMPCController, TunedETMPCController
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_energy import RocketLandingEnergyEnv
-from experiment_utils import ROBUSTNESS_SCENARIOS, load_obs_rms, normalize_obs
-from generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
+from rocket_landing_control.studies.tune_mpc import TunedMPCController, TunedETMPCController
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
+from rocket_landing_control.core.experiment_utils import ROBUSTNESS_SCENARIOS, load_obs_rms, normalize_obs
+from rocket_landing_control.visualization.generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
 
 OUTPUT_DIR = Path("results/reproducible/final_comparison/unified_trajectories")
 SEED = 1000  # unified seed for all strategies

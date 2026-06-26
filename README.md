@@ -3,7 +3,7 @@
 [![CI](https://github.com/17362975180/drl-rocket-landing-control/actions/workflows/ci.yml/badge.svg)](https://github.com/17362975180/drl-rocket-landing-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue.svg)](requirements.txt)
-[![Gymnasium](https://img.shields.io/badge/Gymnasium-Rocket%20Landing-green.svg)](envs/rocket_env.py)
+[![Gymnasium](https://img.shields.io/badge/Gymnasium-Rocket%20Landing-green.svg)](rocket_landing_control/envs/rocket_env.py)
 
 Deep reinforcement learning project for one-dimensional vertical rocket soft
 landing. The project trains and evaluates PPO-based controllers, compares them
@@ -61,21 +61,21 @@ For the full experimental narrative, see
 
 ```text
 .
-|-- envs/                         # Rocket landing environments
 |-- configs/                      # PPO configuration files
 |-- docs/                         # Roadmap, release notes, structure guide
 |   `-- reports/                  # Long-form experiment reports
 |-- experiments/                  # Experiment entry points
+|-- rocket_landing_control/       # Source package and runnable modules
+|   |-- core/                     # Shared evaluation and reproducibility helpers
+|   |-- envs/                     # Rocket landing environments
+|   |-- studies/                  # Ablations, robustness, and controller comparisons
+|   |-- visualization/            # Plotting, animation, and figure generation
+|   `-- workflows/                # Training, evaluation, smoke tests, verification
 |-- saved_models/                 # Small reference PPO model and normalization stats
 |-- results/reproducible/         # Lightweight verified summaries
 |-- scripts/                      # Repository maintenance helpers
 |-- submission_version/           # Final course-submission snapshot and report
-|-- train.py                      # PPO training entry point
-|-- evaluate.py                   # Single-model evaluation
-|-- robustness_full_test.py       # Multi-scenario robustness evaluation
-|-- run_full_comparison.py        # Full comparison workflow
-|-- smoke_tests.py                # Fast environment and physics checks
-`-- verify_reproducible_outputs.py
+`-- requirements.txt
 ```
 
 The local workspace may contain `tmp/`, `.venv/`, full `results/`, TensorBoard
@@ -123,13 +123,13 @@ python -m pip install -r requirements.txt
 Run the fast smoke tests:
 
 ```bash
-python smoke_tests.py
+python -m rocket_landing_control.workflows.smoke_tests
 ```
 
 Run a quick evaluation with the included reference model:
 
 ```bash
-python quick_eval.py --model saved_models/ppo_rocket_v7.zip --n-episodes 10
+python -m rocket_landing_control.workflows.quick_eval --model saved_models/ppo_rocket_v7.zip --n-episodes 10
 ```
 
 The full reproducibility verifier checks generated artifacts under `results/`.
@@ -139,7 +139,7 @@ training run, and trajectory file. After regenerating or restoring the full
 result artifacts, run:
 
 ```bash
-python verify_reproducible_outputs.py
+python -m rocket_landing_control.workflows.verify_reproducible_outputs
 ```
 
 ## Training
@@ -147,13 +147,13 @@ python verify_reproducible_outputs.py
 Train a PPO landing controller:
 
 ```bash
-python train.py --run-name main --total-steps 500000 --eval-interval 10000 --eval-episodes 20
+python -m rocket_landing_control.workflows.train --run-name main --total-steps 500000 --eval-interval 10000 --eval-episodes 20
 ```
 
 Run the formal 100-episode evaluation:
 
 ```bash
-python evaluate.py \
+python -m rocket_landing_control.workflows.evaluate \
   --model saved_models/ppo_rocket_v7.zip \
   --stats saved_models/vec_normalize_stats_v7.pkl \
   --n-episodes 100 \
@@ -188,9 +188,9 @@ AI-assisted development and review notes are documented in
 ## Structure
 
 The repository structure is documented in `docs/STRUCTURE.md`. The short
-version: public-facing documentation lives in `docs/`, reusable environments
-live in `envs/`, experiment orchestration lives in `experiments/`, and the root
-keeps the main runnable entry points visible.
+version: public-facing documentation lives in `docs/`, source code lives in
+`rocket_landing_control/`, experiment orchestration lives in `experiments/`, and
+the root stays reserved for project metadata and high-level folders.
 
 ## Roadmap
 

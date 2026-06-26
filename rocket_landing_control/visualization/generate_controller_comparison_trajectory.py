@@ -17,7 +17,7 @@ from scipy.optimize import minimize
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
 
 
 def load_model_and_stats():

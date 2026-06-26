@@ -8,8 +8,8 @@ import os
 
 from stable_baselines3 import PPO
 
-from envs.rocket_env import RocketLandingEnv
-from experiment_utils import (
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.core.experiment_utils import (
     STANDARD_EVAL_OPTIONS,
     auto_find_stats,
     evaluate_model_rollouts,

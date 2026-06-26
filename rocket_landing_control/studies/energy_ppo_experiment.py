@@ -16,16 +16,16 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-from envs.rocket_env import RocketLandingEnv
-from envs.rocket_env_energy import RocketLandingEnergyEnv
-from experiment_utils import (
+from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
+from rocket_landing_control.core.experiment_utils import (
     STANDARD_EVAL_OPTIONS,
     evaluate_model_rollouts,
     load_obs_rms,
     summarize_rollouts,
     write_evaluation_outputs,
 )
-from generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
+from rocket_landing_control.visualization.generate_experiment_trajectory_comparisons import normalize_trajectory, plot_comparison
 
 
 BASELINE_MODEL = "results/sweeps/v2_reward/models/final_model.zip"
