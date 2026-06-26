@@ -34,8 +34,12 @@ if ($status) {
     throw "Commit or stash local changes before publishing."
 }
 
-$remoteUrl = git remote get-url $RemoteName 2>$null
-if ($LASTEXITCODE -eq 0 -and $remoteUrl) {
+$remoteUrl = ""
+if ((git remote) -contains $RemoteName) {
+    $remoteUrl = git remote get-url $RemoteName
+}
+
+if ($remoteUrl) {
     Write-Host "Remote '$RemoteName' already exists: $remoteUrl"
     Invoke-Checked { git push -u $RemoteName $branch }
     exit 0
