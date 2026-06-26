@@ -193,8 +193,8 @@ def main():
         ROOT / "landing_demo.gif",
         ROOT / "VERIFIED_RESULTS.md",
         ROOT / "verified_summary.json",
-        Path("REPORT_REPRODUCIBLE.md"),
-        Path("AI_USAGE.md"),
+        Path("docs/reports/REPORT_REPRODUCIBLE.md"),
+        Path("docs/AI_USAGE.md"),
     ]:
         require(path.exists() and path.stat().st_size > 0, f"{path} is present and non-empty")
 

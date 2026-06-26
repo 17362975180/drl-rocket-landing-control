@@ -53,7 +53,8 @@ Representative verified results from the public artifacts:
 | Robustness protocol | 11 standard/generalization/disturbance scenarios |
 | Public demo | `results/reproducible/landing_demo.gif` |
 
-For the full experimental narrative, see `REPORT_REPRODUCIBLE.md` and
+For the full experimental narrative, see
+`docs/reports/REPORT_REPRODUCIBLE.md` and
 `results/reproducible/VERIFIED_RESULTS.md`.
 
 ## Repository Layout
@@ -62,9 +63,12 @@ For the full experimental narrative, see `REPORT_REPRODUCIBLE.md` and
 .
 |-- envs/                         # Rocket landing environments
 |-- configs/                      # PPO configuration files
+|-- docs/                         # Roadmap, release notes, structure guide
+|   `-- reports/                  # Long-form experiment reports
 |-- experiments/                  # Experiment entry points
 |-- saved_models/                 # Small reference PPO model and normalization stats
 |-- results/reproducible/         # Lightweight verified summaries
+|-- scripts/                      # Repository maintenance helpers
 |-- submission_version/           # Final course-submission snapshot and report
 |-- train.py                      # PPO training entry point
 |-- evaluate.py                   # Single-model evaluation
@@ -164,7 +168,7 @@ Verified summary artifacts:
 - `results/reproducible/VERIFIED_RESULTS.md`
 - `results/reproducible/verified_summary.json`
 - `results/reproducible/landing_demo.gif`
-- `REPORT_REPRODUCIBLE.md`
+- `docs/reports/REPORT_REPRODUCIBLE.md`
 
 Large generated outputs are excluded from version control. Re-run the scripts
 above to regenerate local artifacts under `results/`.
@@ -178,7 +182,15 @@ The final course report is stored in:
 
 ## AI Usage
 
-AI-assisted development and review notes are documented in `AI_USAGE.md`.
+AI-assisted development and review notes are documented in
+`docs/AI_USAGE.md`.
+
+## Structure
+
+The repository structure is documented in `docs/STRUCTURE.md`. The short
+version: public-facing documentation lives in `docs/`, reusable environments
+live in `envs/`, experiment orchestration lives in `experiments/`, and the root
+keeps the main runnable entry points visible.
 
 ## Roadmap
 

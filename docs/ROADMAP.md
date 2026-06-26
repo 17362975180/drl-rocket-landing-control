@@ -35,6 +35,9 @@ next upgrades should make it easier to discover, run, cite, and extend.
 - Add a "How to reproduce the paper-style figures" guide.
 - Add expected runtime and hardware notes for each experiment tier.
 - Add an FAQ for common Windows, PyTorch, and Stable-Baselines3 setup issues.
+- Gradually split broad root-level research scripts into a small package plus
+  focused command modules, while keeping compatibility wrappers for common
+  commands.
 
 ## Community Improvements
 
