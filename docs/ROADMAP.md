@@ -1,7 +1,8 @@
 # Roadmap
 
-This project is already usable as a compact rocket-landing DRL artifact. The
-next upgrades should make it easier to discover, run, cite, and extend.
+This project is already usable as a compact Energy PPO rocket-landing DRL
+artifact. The next upgrades should make the energy-guided controller easier to
+discover, run, cite, and extend.
 
 ## High-Impact Next Steps
 
@@ -9,12 +10,13 @@ next upgrades should make it easier to discover, run, cite, and extend.
   entry point, so users can run `gymnasium.make(...)`.
 - Add a notebook tutorial that trains a tiny PPO policy, evaluates the included
   checkpoint, and visualizes one trajectory.
-- Add a benchmark table generated from JSON artifacts, with success rate,
-  landing velocity, fuel use, and runtime for each controller.
+- Add a benchmark table generated from JSON artifacts, with Energy PPO as the
+  first row and success rate, landing velocity, fuel use, and runtime for each
+  controller.
 - Add a small web or Streamlit demo where visitors can replay trajectories and
   compare PPO, PID, and MPC behavior.
-- Publish model cards for the included PPO checkpoint and any future trained
-  policies.
+- Publish a model card for the included Energy PPO checkpoint and any future
+  trained policies.
 - Create pinned GitHub issues for good first contributions: new disturbances,
   new controllers, plotting improvements, and documentation polish.
 
@@ -23,7 +25,8 @@ next upgrades should make it easier to discover, run, cite, and extend.
 - Extend the environment from 1D vertical landing to 2D landing with lateral
   drift and attitude control.
 - Add curriculum learning and domain randomization experiments.
-- Compare PPO against newer off-policy and model-based RL baselines.
+- Keep Pure Energy-Guided PPO as the headline method and compare newer
+  off-policy or model-based RL baselines against it.
 - Evaluate safety shielding as a formal intervention policy, not only as an
   environment option.
 - Track energy-aware reward variants with fixed seeds and generated summary

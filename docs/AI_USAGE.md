@@ -127,7 +127,8 @@ Human verification remains required for:
 - checking that `eval_episodes.csv` contains randomized initial conditions;
 - confirming the final success rate, failure reasons, figures, and report
   tables match the generated result files.
-- verifying the pure energy-guided PPO experiment from the official
+- treating the pure Energy-Guided PPO experiment as the main result and
+  verifying it from the official
   from-scratch run
   `results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_ppo.json` before
   making any claims about whether the energy reward converged.

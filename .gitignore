@@ -47,6 +47,20 @@ results/**
 !results/reproducible/*.md
 !results/reproducible/*.json
 !results/reproducible/landing_demo.gif
+!results/reproducible/energy_ppo_from_scratch_time/
+!results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_ppo.json
+!results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_metrics.png
+!results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_trajectory.png
+!results/reproducible/energy_ppo_from_scratch_time/pure_energy_accounting.png
+!results/reproducible/energy_ppo_from_scratch_time/pure_energy_reward_breakdown.png
+!results/reproducible/energy_ppo_from_scratch_time/models/
+!results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip
+!results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl
+!results/reproducible/energy_ppo_from_scratch_time/scenarios/
+!results/reproducible/energy_ppo_from_scratch_time/scenarios/standard_comparison/
+!results/reproducible/energy_ppo_from_scratch_time/scenarios/standard_comparison/scenario_comparison.json
+!results/reproducible/energy_ppo_from_scratch_time/scenarios/standard_comparison/scenario_comparison.csv
+!results/reproducible/energy_ppo_from_scratch_time/scenarios/standard_comparison/scenario_comparison_metrics.png
 
 submission_version/results/**
 !submission_version/results/

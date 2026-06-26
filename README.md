@@ -5,29 +5,28 @@
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue.svg)](requirements.txt)
 [![Gymnasium](https://img.shields.io/badge/Gymnasium-Rocket%20Landing-green.svg)](rocket_landing_control/envs/rocket_env.py)
 
-Deep reinforcement learning project for one-dimensional vertical rocket soft
-landing. The project trains and evaluates PPO-based controllers, compares them
-with classical control baselines, and includes reproducible evaluation scripts
-for robustness, reward ablation, and controller comparison.
+Energy-aware deep reinforcement learning project for one-dimensional vertical
+rocket soft landing. The flagship result is a pure Energy-Guided PPO controller
+that lands faster, uses less fuel, and reaches lower touchdown velocity than the
+Standard PPO baseline.
 
 ![Rocket landing demo](results/reproducible/landing_demo.gif)
 
 ## Why This Project Is Interesting
 
-- A compact rocket soft-landing benchmark that is easy to inspect, modify, and
-  run locally.
+- Pure Energy-Guided PPO is the main method: the policy observes energy ratios
+  and is trained with an energy-shaped objective.
+- Standard PPO is kept as the baseline, not the headline.
 - Physics constraints are explicit: fuel depletion, thrust lag, drag, mass
   changes, action delay, sensor noise, and safety shielding.
-- The repository compares learned controllers with PID, MPC, event-triggered
-  MPC, SAC, and TD3 baselines instead of showing only one successful run.
-- Reproducibility artifacts are kept small enough for GitHub while still giving
-  readers concrete metrics and trajectories to inspect.
+- The repository compares Energy PPO against Standard PPO, PID, MPC,
+  event-triggered MPC, SAC, and TD3 instead of showing only one successful run.
 
 ## Project Status
 
 This repository is prepared for public release as a compact research/code
-artifact. It includes runnable source code, a small reference PPO checkpoint,
-selected verified summaries, the final course-submission snapshot, and a
+artifact. It includes runnable source code, the Energy PPO checkpoint, selected
+verified summaries, the final course-submission snapshot, and a
 reproducibility report. Large regenerated experiment folders and local scratch
 files are intentionally excluded from version control.
 
@@ -35,7 +34,8 @@ files are intentionally excluded from version control.
 
 - Gymnasium environments for rocket dynamics, fuel limits, thrust inertia, drag,
   and safety constraints.
-- Standard PPO and energy-aware PPO training workflows.
+- Pure Energy-Guided PPO training and evaluation workflow.
+- Standard PPO baseline retained for direct comparison.
 - Evaluation scripts for 100-episode standard tests and 11-scenario robustness
   / generalization tests.
 - Baseline comparisons against PID, MPC, event-triggered MPC, SAC, and TD3.
@@ -44,14 +44,15 @@ files are intentionally excluded from version control.
 
 ## Key Results
 
-Representative verified results from the public artifacts:
+Representative verified results from the public Energy PPO artifacts:
 
 | Evaluation | Result |
 | --- | --- |
-| Standard PPO quick reference model | Included in `saved_models/ppo_rocket_v7.zip` |
-| Fast smoke checks | Seed reproducibility, fuel constraints, terminal rewards, energy reward behavior |
-| Robustness protocol | 11 standard/generalization/disturbance scenarios |
-| Public demo | `results/reproducible/landing_demo.gif` |
+| Main method | Pure Energy-Guided PPO |
+| Standard 100-episode eval | 100% success, 0.299 m/s mean final velocity error |
+| Efficiency vs Standard PPO | Fuel use 3.015 kg vs 4.406 kg; landing time 4.716 s vs 7.293 s |
+| Unified 11-scenario protocol | 99.8% average success; worst scenario 98% |
+| Main public checkpoint | `results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip` |
 
 For the full experimental narrative, see
 `docs/reports/REPORT_REPRODUCIBLE.md` and
@@ -71,7 +72,7 @@ For the full experimental narrative, see
 |   |-- studies/                  # Ablations, robustness, and controller comparisons
 |   |-- visualization/            # Plotting, animation, and figure generation
 |   `-- workflows/                # Training, evaluation, smoke tests, verification
-|-- saved_models/                 # Small reference PPO model and normalization stats
+|-- saved_models/                 # Legacy Standard PPO baseline checkpoint
 |-- results/reproducible/         # Lightweight verified summaries
 |-- scripts/                      # Repository maintenance helpers
 |-- submission_version/           # Final course-submission snapshot and report
@@ -86,8 +87,12 @@ the GitHub repository stays clean and reproducible.
 
 The public repository keeps a lightweight set of artifacts:
 
-- `saved_models/ppo_rocket_v7.zip`
-- `saved_models/vec_normalize_stats_v7.pkl`
+- `results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip`
+- `results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl`
+- `results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_ppo.json`
+- `results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_metrics.png`
+- `results/reproducible/energy_ppo_from_scratch_time/baseline_vs_pure_energy_trajectory.png`
+- `results/reproducible/energy_ppo_from_scratch_time/scenarios/standard_comparison/scenario_comparison.json`
 - `results/reproducible/*.json`
 - `results/reproducible/VERIFIED_RESULTS.md`
 - `results/reproducible/landing_demo.gif`
@@ -126,10 +131,14 @@ Run the fast smoke tests:
 python -m rocket_landing_control.workflows.smoke_tests
 ```
 
-Run a quick evaluation with the included reference model:
+Run a quick evaluation with the included Energy PPO checkpoint:
 
 ```bash
-python -m rocket_landing_control.workflows.quick_eval --model saved_models/ppo_rocket_v7.zip --n-episodes 10
+python -m rocket_landing_control.workflows.quick_eval \
+  --env energy \
+  --model results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip \
+  --stats results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl \
+  --n-episodes 10
 ```
 
 The full reproducibility verifier checks generated artifacts under `results/`.
@@ -144,21 +153,26 @@ python -m rocket_landing_control.workflows.verify_reproducible_outputs
 
 ## Training
 
-Train a PPO landing controller:
+Train a pure Energy-Guided PPO landing controller:
 
 ```bash
-python -m rocket_landing_control.workflows.train --run-name main --total-steps 500000 --eval-interval 10000 --eval-episodes 20
+python -m rocket_landing_control.studies.energy_ppo_experiment \
+  --output-dir results/local_energy_ppo \
+  --train-steps 300000 \
+  --n-episodes 100 \
+  --seed 17000
 ```
 
-Run the formal 100-episode evaluation:
+Run a formal 100-episode Energy PPO evaluation:
 
 ```bash
-python -m rocket_landing_control.workflows.evaluate \
-  --model saved_models/ppo_rocket_v7.zip \
-  --stats saved_models/vec_normalize_stats_v7.pkl \
+python -m rocket_landing_control.workflows.quick_eval \
+  --env energy \
+  --model results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip \
+  --stats results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl \
   --n-episodes 100 \
-  --output-dir results/local_eval \
-  --save-trajectories
+  --seed 17000 \
+  --output results/local_eval/energy_ppo_eval.json
 ```
 
 ## Reproducibility Notes

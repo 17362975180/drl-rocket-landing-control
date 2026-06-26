@@ -9,6 +9,7 @@ import os
 from stable_baselines3 import PPO
 
 from rocket_landing_control.envs.rocket_env import RocketLandingEnv
+from rocket_landing_control.envs.rocket_env_energy import RocketLandingEnergyEnv
 from rocket_landing_control.core.experiment_utils import (
     STANDARD_EVAL_OPTIONS,
     auto_find_stats,
@@ -18,13 +19,19 @@ from rocket_landing_control.core.experiment_utils import (
 )
 
 
-def quick_evaluate(model_path, stats_path=None, n_episodes=10, seed=42, options=None):
+ENV_FACTORIES = {
+    "base": RocketLandingEnv,
+    "energy": RocketLandingEnergyEnv,
+}
+
+
+def quick_evaluate(model_path, stats_path=None, n_episodes=10, seed=42, options=None, env="base"):
     model = PPO.load(model_path, device="cpu")
     stats_path = auto_find_stats(model_path, stats_path)
     obs_rms = load_obs_rms(stats_path)
     rollouts = evaluate_model_rollouts(
         model=model,
-        env_factory=RocketLandingEnv,
+        env_factory=ENV_FACTORIES[env],
         obs_rms=obs_rms,
         n_episodes=n_episodes,
         seed=seed,
@@ -40,13 +47,14 @@ def parse_args():
     parser.add_argument("--stats", type=str, default=None, help="Path to VecNormalize stats file.")
     parser.add_argument("--n-episodes", type=int, default=10)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--env", choices=sorted(ENV_FACTORIES), default="base")
     parser.add_argument("--output", type=str, default=None)
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    result = quick_evaluate(args.model, args.stats, args.n_episodes, args.seed)
+    result = quick_evaluate(args.model, args.stats, args.n_episodes, args.seed, env=args.env)
     print(f"Success rate: {result['success_rate']:.1%}")
     print(f"Crash rate: {result['crash_rate']:.1%}")
     print(f"Mean |final h|: {result['mean_final_height_error']:.3f} m")

@@ -1,0 +1,2493 @@
+{
+  "labels": [
+    "Baseline PPO",
+    "Pure Energy PPO"
+  ],
+  "scenarios": [
+    "standard",
+    "random_height",
+    "random_velocity",
+    "random_mass",
+    "random_fuel",
+    "gravity_bias",
+    "thrust_bias",
+    "sensor_noise",
+    "action_delay_1",
+    "action_delay_2",
+    "combined"
+  ],
+  "generalization_scenarios": [
+    "standard",
+    "random_height",
+    "random_velocity",
+    "random_mass",
+    "random_fuel"
+  ],
+  "robustness_scenarios": [
+    "standard",
+    "gravity_bias",
+    "thrust_bias",
+    "sensor_noise",
+    "action_delay_1",
+    "action_delay_2",
+    "combined"
+  ],
+  "results_by_policy": {
+    "Baseline PPO": {
+      "standard": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 18000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.174954457505462,
+        "std_final_velocity_error": 0.20197573770555521,
+        "mean_fuel_used": 4.393898241497577,
+        "std_fuel_used": 0.2096061298073242,
+        "mean_landing_time": 7.264999999999983,
+        "std_landing_time": 0.4014037867285246,
+        "mean_episode_reward": 1251.385654177349,
+        "std_episode_reward": 27.131556507849975,
+        "mean_abs_throttle_delta": 0.014772030636797703,
+        "mean_max_velocity": 15.732908264916,
+        "mean_max_acceleration": 9.809929796414615,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "standard",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_height": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 28000,
+        "success_rate": 0.48,
+        "crash_rate": 0.52,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 2.5038255654269874,
+        "std_final_velocity_error": 1.4045494946962713,
+        "mean_fuel_used": 4.3547430687975135,
+        "std_fuel_used": 0.6566971348288196,
+        "mean_landing_time": 7.363999999999987,
+        "std_landing_time": 1.3471094981477942,
+        "mean_episode_reward": 71.97800304522283,
+        "std_episode_reward": 1149.9893760394061,
+        "mean_abs_throttle_delta": 0.017419730438717605,
+        "mean_max_velocity": 16.009179278609178,
+        "mean_max_acceleration": 9.810003161612178,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 26,
+          "success": 24
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_height",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_velocity": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 38000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0486036814951172,
+        "std_final_velocity_error": 0.20914645744990876,
+        "mean_fuel_used": 4.52541486042738,
+        "std_fuel_used": 0.21613083915290052,
+        "mean_landing_time": 7.528999999999981,
+        "std_landing_time": 0.4468881291777611,
+        "mean_episode_reward": 1231.1045741571384,
+        "std_episode_reward": 30.267835665493514,
+        "mean_abs_throttle_delta": 0.014450249442247019,
+        "mean_max_velocity": 16.077007026127713,
+        "mean_max_acceleration": 9.810884235761238,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_velocity",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -5.0,
+            5.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_mass": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 48000,
+        "success_rate": 0.94,
+        "crash_rate": 0.06,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.463742229511113,
+        "std_final_velocity_error": 0.7319687086639952,
+        "mean_fuel_used": 4.286111012259498,
+        "std_fuel_used": 0.431497895429303,
+        "mean_landing_time": 7.256999999999985,
+        "std_landing_time": 0.37603324321128717,
+        "mean_episode_reward": 1107.2621607065705,
+        "std_episode_reward": 536.5700680234539,
+        "mean_abs_throttle_delta": 0.01490685219185209,
+        "mean_max_velocity": 15.816628378699747,
+        "mean_max_acceleration": 9.80988296647873,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 47,
+          "crash": 3
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_mass",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "dry_mass_range": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      "random_fuel": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 58000,
+        "success_rate": 0.26,
+        "crash_rate": 0.74,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 4.260400821037939,
+        "std_final_velocity_error": 3.147736420757974,
+        "mean_fuel_used": 3.9054043857988474,
+        "std_fuel_used": 0.39909065238704766,
+        "mean_landing_time": 6.597999999999985,
+        "std_landing_time": 0.8848706120105893,
+        "mean_episode_reward": -425.23349607216414,
+        "std_episode_reward": 1007.2736975648253,
+        "mean_abs_throttle_delta": 0.0193445323799922,
+        "mean_max_velocity": 15.820332373800618,
+        "mean_max_acceleration": 9.809855462424736,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 37,
+          "success": 13
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_fuel",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "initial_fuel_range": [
+            3.0,
+            7.0
+          ]
+        }
+      },
+      "gravity_bias": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 68000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.2122420946778554,
+        "std_final_velocity_error": 0.2627205616290371,
+        "mean_fuel_used": 4.399595783854834,
+        "std_fuel_used": 0.3540271945920677,
+        "mean_landing_time": 7.275999999999983,
+        "std_landing_time": 0.3927136361268844,
+        "mean_episode_reward": 1244.001987781281,
+        "std_episode_reward": 21.13474072142988,
+        "mean_abs_throttle_delta": 0.014795410970368563,
+        "mean_max_velocity": 15.69930365584032,
+        "mean_max_acceleration": 9.830630521920193,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "gravity_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "gravity_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "thrust_bias": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 78000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.2025605300245332,
+        "std_final_velocity_error": 0.27799136778716316,
+        "mean_fuel_used": 4.389946679867024,
+        "std_fuel_used": 0.256541223962144,
+        "mean_landing_time": 7.257999999999984,
+        "std_landing_time": 0.4828415889295361,
+        "mean_episode_reward": 1244.290685223473,
+        "std_episode_reward": 36.633808306908826,
+        "mean_abs_throttle_delta": 0.014864894685224426,
+        "mean_max_velocity": 15.712717937778379,
+        "mean_max_acceleration": 9.809882982328316,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "thrust_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "thrust_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "sensor_noise": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 88000,
+        "success_rate": 0.84,
+        "crash_rate": 0.16,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.4046896342132502,
+        "std_final_velocity_error": 0.5099408039185651,
+        "mean_fuel_used": 4.420717545508407,
+        "std_fuel_used": 0.2538463298301063,
+        "mean_landing_time": 7.356999999999982,
+        "std_landing_time": 0.4696818071843947,
+        "mean_episode_reward": 847.3525209250263,
+        "std_episode_reward": 822.3599882383864,
+        "mean_abs_throttle_delta": 0.529254586043312,
+        "mean_max_velocity": 15.874601851509,
+        "mean_max_acceleration": 16.8049507686148,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 42,
+          "crash": 8
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "sensor_noise",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.05,
+          "action_delay_steps": 0
+        }
+      },
+      "action_delay_1": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 98000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0648865130244116,
+        "std_final_velocity_error": 0.213932646486566,
+        "mean_fuel_used": 4.503810508408584,
+        "std_fuel_used": 0.222316919787806,
+        "mean_landing_time": 7.462999999999982,
+        "std_landing_time": 0.42927962914631623,
+        "mean_episode_reward": 1235.0780118234109,
+        "std_episode_reward": 29.46172425008725,
+        "mean_abs_throttle_delta": 0.01532356351924361,
+        "mean_max_velocity": 16.19012527948837,
+        "mean_max_acceleration": 9.809936030471723,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "action_delay_1",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 1
+        }
+      },
+      "action_delay_2": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 108000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0083583591219947,
+        "std_final_velocity_error": 0.24489840961368442,
+        "mean_fuel_used": 4.55668668653816,
+        "std_fuel_used": 0.2526860964364405,
+        "mean_landing_time": 7.581999999999981,
+        "std_landing_time": 0.47820079464593074,
+        "mean_episode_reward": 1224.5378403915443,
+        "std_episode_reward": 32.45385265000551,
+        "mean_abs_throttle_delta": 0.01789802852088745,
+        "mean_max_velocity": 16.578032272140078,
+        "mean_max_acceleration": 9.810095026374876,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "action_delay_2",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 2
+        }
+      },
+      "combined": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 118000,
+        "success_rate": 0.4,
+        "crash_rate": 0.6,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 2.728884159689396,
+        "std_final_velocity_error": 1.774922179216975,
+        "mean_fuel_used": 4.210894153083901,
+        "std_fuel_used": 0.6685972642519915,
+        "mean_landing_time": 7.103999999999985,
+        "std_landing_time": 1.469756442408061,
+        "mean_episode_reward": -145.75498187627701,
+        "std_episode_reward": 1098.5133146753562,
+        "mean_abs_throttle_delta": 0.2953939419466372,
+        "mean_max_velocity": 16.3781770098451,
+        "mean_max_acceleration": 13.74337121329677,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 30,
+          "success": 20
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "combined",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -3.0,
+            3.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.03,
+          "action_delay_steps": 1,
+          "dry_mass_range": [
+            9.0,
+            11.0
+          ],
+          "initial_fuel_range": [
+            4.0,
+            6.0
+          ],
+          "gravity_scale_range": [
+            0.95,
+            1.05
+          ],
+          "thrust_scale_range": [
+            0.95,
+            1.05
+          ]
+        }
+      }
+    },
+    "Pure Energy PPO": {
+      "standard": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 18000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.31284019007106617,
+        "std_final_velocity_error": 0.1087667542407808,
+        "mean_fuel_used": 3.0267809301316735,
+        "std_fuel_used": 0.1459791778192233,
+        "mean_landing_time": 4.732999999999991,
+        "std_landing_time": 0.27506544675767525,
+        "mean_episode_reward": 861.7893683436856,
+        "std_episode_reward": 339.1469029730167,
+        "mean_abs_throttle_delta": 0.044078972724594594,
+        "mean_max_velocity": 20.645197825502247,
+        "mean_max_acceleration": 11.257952603038703,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "standard",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_height": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 28000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3336133077699667,
+        "std_final_velocity_error": 0.1457891296464607,
+        "mean_fuel_used": 3.1283828661516315,
+        "std_fuel_used": 0.45147615865872187,
+        "mean_landing_time": 4.93899999999999,
+        "std_landing_time": 0.8407906992825236,
+        "mean_episode_reward": 735.0792217653938,
+        "std_episode_reward": 526.452300429391,
+        "mean_abs_throttle_delta": 0.05248038235404823,
+        "mean_max_velocity": 20.858355836928595,
+        "mean_max_acceleration": 12.003783164092436,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_height",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_velocity": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 38000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.29411130462826907,
+        "std_final_velocity_error": 0.09839165825199812,
+        "mean_fuel_used": 3.0802540064603092,
+        "std_fuel_used": 0.14875116560373658,
+        "mean_landing_time": 4.84599999999999,
+        "std_landing_time": 0.3868901652924237,
+        "mean_episode_reward": 723.9422425929687,
+        "std_episode_reward": 615.8380486203087,
+        "mean_abs_throttle_delta": 0.04479262229163527,
+        "mean_max_velocity": 21.005383898790086,
+        "mean_max_acceleration": 11.51729346543377,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_velocity",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -5.0,
+            5.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "random_mass": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 48000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3007513264776351,
+        "std_final_velocity_error": 0.11967673830246327,
+        "mean_fuel_used": 2.965577553234995,
+        "std_fuel_used": 0.36767738687836776,
+        "mean_landing_time": 4.7269999999999905,
+        "std_landing_time": 0.30119926958742677,
+        "mean_episode_reward": 729.6875424530388,
+        "std_episode_reward": 530.0237857593801,
+        "mean_abs_throttle_delta": 0.04454553497007966,
+        "mean_max_velocity": 20.93004346782192,
+        "mean_max_acceleration": 12.333511961552972,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_mass",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "dry_mass_range": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      "random_fuel": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 58000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3197058245920515,
+        "std_final_velocity_error": 0.24984649561493205,
+        "mean_fuel_used": 3.0750304558470645,
+        "std_fuel_used": 0.279137591099198,
+        "mean_landing_time": 4.735999999999991,
+        "std_landing_time": 0.32894376419077964,
+        "mean_episode_reward": 777.3692407461833,
+        "std_episode_reward": 403.2399281414568,
+        "mean_abs_throttle_delta": 0.04293382927535736,
+        "mean_max_velocity": 20.508163054518107,
+        "mean_max_acceleration": 11.6094678088768,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_fuel",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "initial_fuel_range": [
+            3.0,
+            7.0
+          ]
+        }
+      },
+      "gravity_bias": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 68000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.2823309047135596,
+        "std_final_velocity_error": 0.10415916477548719,
+        "mean_fuel_used": 3.0156119041219354,
+        "std_fuel_used": 0.2048786885925821,
+        "mean_landing_time": 4.714999999999992,
+        "std_landing_time": 0.2341473894793611,
+        "mean_episode_reward": 867.8764808493688,
+        "std_episode_reward": 320.7568650185411,
+        "mean_abs_throttle_delta": 0.04199731012308267,
+        "mean_max_velocity": 20.57639795575143,
+        "mean_max_acceleration": 11.236712072940815,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "gravity_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "gravity_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "thrust_bias": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 78000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.2854277623746919,
+        "std_final_velocity_error": 0.09525532326351849,
+        "mean_fuel_used": 3.0332324502604875,
+        "std_fuel_used": 0.19051260521958122,
+        "mean_landing_time": 4.7379999999999916,
+        "std_landing_time": 0.33310058540927123,
+        "mean_episode_reward": 809.0837860094532,
+        "std_episode_reward": 551.1079976835985,
+        "mean_abs_throttle_delta": 0.04382869777357605,
+        "mean_max_velocity": 20.601671351705935,
+        "mean_max_acceleration": 11.550054545149003,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "thrust_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "thrust_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "sensor_noise": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 88000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.39234451736639353,
+        "std_final_velocity_error": 0.10826756093449819,
+        "mean_fuel_used": 3.017671237796545,
+        "std_fuel_used": 0.1605526711685407,
+        "mean_landing_time": 4.737999999999991,
+        "std_landing_time": 0.2975836016987485,
+        "mean_episode_reward": 786.7688345076356,
+        "std_episode_reward": 479.28639683760287,
+        "mean_abs_throttle_delta": 0.08539160826925425,
+        "mean_max_velocity": 20.699304017618953,
+        "mean_max_acceleration": 12.118463782194924,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "sensor_noise",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.05,
+          "action_delay_steps": 0
+        }
+      },
+      "action_delay_1": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 98000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.589552958419382,
+        "std_final_velocity_error": 0.1271776150982611,
+        "mean_fuel_used": 3.01076489225775,
+        "std_fuel_used": 0.06863756228464538,
+        "mean_landing_time": 4.729999999999991,
+        "std_landing_time": 0.15132745950421503,
+        "mean_episode_reward": 769.9882558495403,
+        "std_episode_reward": 148.32219874503585,
+        "mean_abs_throttle_delta": 0.04763445536330429,
+        "mean_max_velocity": 21.212642964681198,
+        "mean_max_acceleration": 11.201810705682298,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "action_delay_1",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 1
+        }
+      },
+      "action_delay_2": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 108000,
+        "success_rate": 0.98,
+        "crash_rate": 0.02,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.130132864747058,
+        "std_final_velocity_error": 0.3882277453721897,
+        "mean_fuel_used": 3.2433678229898213,
+        "std_fuel_used": 0.1928854016197927,
+        "mean_landing_time": 5.20899999999999,
+        "std_landing_time": 0.3563270969207914,
+        "mean_episode_reward": -66.58899272457715,
+        "std_episode_reward": 1076.0926774226168,
+        "mean_abs_throttle_delta": 0.07794931534502408,
+        "mean_max_velocity": 21.6206750739074,
+        "mean_max_acceleration": 12.692658968921194,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 1,
+          "success": 49
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "action_delay_2",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 2
+        }
+      },
+      "combined": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 118000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.6292141757396286,
+        "std_final_velocity_error": 0.2180628525214939,
+        "mean_fuel_used": 3.0339786281749213,
+        "std_fuel_used": 0.3347279419624118,
+        "mean_landing_time": 4.773999999999991,
+        "std_landing_time": 0.5659717307427975,
+        "mean_episode_reward": 590.1151903884237,
+        "std_episode_reward": 439.50809115369617,
+        "mean_abs_throttle_delta": 0.0661829716052602,
+        "mean_max_velocity": 21.148680198436576,
+        "mean_max_acceleration": 11.825063806385092,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "combined",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -3.0,
+            3.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.03,
+          "action_delay_steps": 1,
+          "dry_mass_range": [
+            9.0,
+            11.0
+          ],
+          "initial_fuel_range": [
+            4.0,
+            6.0
+          ],
+          "gravity_scale_range": [
+            0.95,
+            1.05
+          ],
+          "thrust_scale_range": [
+            0.95,
+            1.05
+          ]
+        }
+      }
+    }
+  },
+  "results": {
+    "standard": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 18000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.174954457505462,
+        "std_final_velocity_error": 0.20197573770555521,
+        "mean_fuel_used": 4.393898241497577,
+        "std_fuel_used": 0.2096061298073242,
+        "mean_landing_time": 7.264999999999983,
+        "std_landing_time": 0.4014037867285246,
+        "mean_episode_reward": 1251.385654177349,
+        "std_episode_reward": 27.131556507849975,
+        "mean_abs_throttle_delta": 0.014772030636797703,
+        "mean_max_velocity": 15.732908264916,
+        "mean_max_acceleration": 9.809929796414615,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "standard",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 18000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.31284019007106617,
+        "std_final_velocity_error": 0.1087667542407808,
+        "mean_fuel_used": 3.0267809301316735,
+        "std_fuel_used": 0.1459791778192233,
+        "mean_landing_time": 4.732999999999991,
+        "std_landing_time": 0.27506544675767525,
+        "mean_episode_reward": 861.7893683436856,
+        "std_episode_reward": 339.1469029730167,
+        "mean_abs_throttle_delta": 0.044078972724594594,
+        "mean_max_velocity": 20.645197825502247,
+        "mean_max_acceleration": 11.257952603038703,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "standard",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      }
+    },
+    "random_height": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 28000,
+        "success_rate": 0.48,
+        "crash_rate": 0.52,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 2.5038255654269874,
+        "std_final_velocity_error": 1.4045494946962713,
+        "mean_fuel_used": 4.3547430687975135,
+        "std_fuel_used": 0.6566971348288196,
+        "mean_landing_time": 7.363999999999987,
+        "std_landing_time": 1.3471094981477942,
+        "mean_episode_reward": 71.97800304522283,
+        "std_episode_reward": 1149.9893760394061,
+        "mean_abs_throttle_delta": 0.017419730438717605,
+        "mean_max_velocity": 16.009179278609178,
+        "mean_max_acceleration": 9.810003161612178,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 26,
+          "success": 24
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_height",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 28000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3336133077699667,
+        "std_final_velocity_error": 0.1457891296464607,
+        "mean_fuel_used": 3.1283828661516315,
+        "std_fuel_used": 0.45147615865872187,
+        "mean_landing_time": 4.93899999999999,
+        "std_landing_time": 0.8407906992825236,
+        "mean_episode_reward": 735.0792217653938,
+        "std_episode_reward": 526.452300429391,
+        "mean_abs_throttle_delta": 0.05248038235404823,
+        "mean_max_velocity": 20.858355836928595,
+        "mean_max_acceleration": 12.003783164092436,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_height",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      }
+    },
+    "random_velocity": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 38000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0486036814951172,
+        "std_final_velocity_error": 0.20914645744990876,
+        "mean_fuel_used": 4.52541486042738,
+        "std_fuel_used": 0.21613083915290052,
+        "mean_landing_time": 7.528999999999981,
+        "std_landing_time": 0.4468881291777611,
+        "mean_episode_reward": 1231.1045741571384,
+        "std_episode_reward": 30.267835665493514,
+        "mean_abs_throttle_delta": 0.014450249442247019,
+        "mean_max_velocity": 16.077007026127713,
+        "mean_max_acceleration": 9.810884235761238,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_velocity",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -5.0,
+            5.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 38000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.29411130462826907,
+        "std_final_velocity_error": 0.09839165825199812,
+        "mean_fuel_used": 3.0802540064603092,
+        "std_fuel_used": 0.14875116560373658,
+        "mean_landing_time": 4.84599999999999,
+        "std_landing_time": 0.3868901652924237,
+        "mean_episode_reward": 723.9422425929687,
+        "std_episode_reward": 615.8380486203087,
+        "mean_abs_throttle_delta": 0.04479262229163527,
+        "mean_max_velocity": 21.005383898790086,
+        "mean_max_acceleration": 11.51729346543377,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_velocity",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -5.0,
+            5.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0
+        }
+      }
+    },
+    "random_mass": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 48000,
+        "success_rate": 0.94,
+        "crash_rate": 0.06,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.463742229511113,
+        "std_final_velocity_error": 0.7319687086639952,
+        "mean_fuel_used": 4.286111012259498,
+        "std_fuel_used": 0.431497895429303,
+        "mean_landing_time": 7.256999999999985,
+        "std_landing_time": 0.37603324321128717,
+        "mean_episode_reward": 1107.2621607065705,
+        "std_episode_reward": 536.5700680234539,
+        "mean_abs_throttle_delta": 0.01490685219185209,
+        "mean_max_velocity": 15.816628378699747,
+        "mean_max_acceleration": 9.80988296647873,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 47,
+          "crash": 3
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_mass",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "dry_mass_range": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 48000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3007513264776351,
+        "std_final_velocity_error": 0.11967673830246327,
+        "mean_fuel_used": 2.965577553234995,
+        "std_fuel_used": 0.36767738687836776,
+        "mean_landing_time": 4.7269999999999905,
+        "std_landing_time": 0.30119926958742677,
+        "mean_episode_reward": 729.6875424530388,
+        "std_episode_reward": 530.0237857593801,
+        "mean_abs_throttle_delta": 0.04454553497007966,
+        "mean_max_velocity": 20.93004346782192,
+        "mean_max_acceleration": 12.333511961552972,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_mass",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "dry_mass_range": [
+            8.0,
+            12.0
+          ]
+        }
+      }
+    },
+    "random_fuel": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 58000,
+        "success_rate": 0.26,
+        "crash_rate": 0.74,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 4.260400821037939,
+        "std_final_velocity_error": 3.147736420757974,
+        "mean_fuel_used": 3.9054043857988474,
+        "std_fuel_used": 0.39909065238704766,
+        "mean_landing_time": 6.597999999999985,
+        "std_landing_time": 0.8848706120105893,
+        "mean_episode_reward": -425.23349607216414,
+        "std_episode_reward": 1007.2736975648253,
+        "mean_abs_throttle_delta": 0.0193445323799922,
+        "mean_max_velocity": 15.820332373800618,
+        "mean_max_acceleration": 9.809855462424736,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 37,
+          "success": 13
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "random_fuel",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "initial_fuel_range": [
+            3.0,
+            7.0
+          ]
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 58000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.3197058245920515,
+        "std_final_velocity_error": 0.24984649561493205,
+        "mean_fuel_used": 3.0750304558470645,
+        "std_fuel_used": 0.279137591099198,
+        "mean_landing_time": 4.735999999999991,
+        "std_landing_time": 0.32894376419077964,
+        "mean_episode_reward": 777.3692407461833,
+        "std_episode_reward": 403.2399281414568,
+        "mean_abs_throttle_delta": 0.04293382927535736,
+        "mean_max_velocity": 20.508163054518107,
+        "mean_max_acceleration": 11.6094678088768,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "random_fuel",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "initial_fuel_range": [
+            3.0,
+            7.0
+          ]
+        }
+      }
+    },
+    "gravity_bias": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 68000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.2122420946778554,
+        "std_final_velocity_error": 0.2627205616290371,
+        "mean_fuel_used": 4.399595783854834,
+        "std_fuel_used": 0.3540271945920677,
+        "mean_landing_time": 7.275999999999983,
+        "std_landing_time": 0.3927136361268844,
+        "mean_episode_reward": 1244.001987781281,
+        "std_episode_reward": 21.13474072142988,
+        "mean_abs_throttle_delta": 0.014795410970368563,
+        "mean_max_velocity": 15.69930365584032,
+        "mean_max_acceleration": 9.830630521920193,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "gravity_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "gravity_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 68000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.2823309047135596,
+        "std_final_velocity_error": 0.10415916477548719,
+        "mean_fuel_used": 3.0156119041219354,
+        "std_fuel_used": 0.2048786885925821,
+        "mean_landing_time": 4.714999999999992,
+        "std_landing_time": 0.2341473894793611,
+        "mean_episode_reward": 867.8764808493688,
+        "std_episode_reward": 320.7568650185411,
+        "mean_abs_throttle_delta": 0.04199731012308267,
+        "mean_max_velocity": 20.57639795575143,
+        "mean_max_acceleration": 11.236712072940815,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "gravity_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "gravity_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      }
+    },
+    "thrust_bias": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 78000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.2025605300245332,
+        "std_final_velocity_error": 0.27799136778716316,
+        "mean_fuel_used": 4.389946679867024,
+        "std_fuel_used": 0.256541223962144,
+        "mean_landing_time": 7.257999999999984,
+        "std_landing_time": 0.4828415889295361,
+        "mean_episode_reward": 1244.290685223473,
+        "std_episode_reward": 36.633808306908826,
+        "mean_abs_throttle_delta": 0.014864894685224426,
+        "mean_max_velocity": 15.712717937778379,
+        "mean_max_acceleration": 9.809882982328316,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "thrust_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "thrust_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 78000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.2854277623746919,
+        "std_final_velocity_error": 0.09525532326351849,
+        "mean_fuel_used": 3.0332324502604875,
+        "std_fuel_used": 0.19051260521958122,
+        "mean_landing_time": 4.7379999999999916,
+        "std_landing_time": 0.33310058540927123,
+        "mean_episode_reward": 809.0837860094532,
+        "std_episode_reward": 551.1079976835985,
+        "mean_abs_throttle_delta": 0.04382869777357605,
+        "mean_max_velocity": 20.601671351705935,
+        "mean_max_acceleration": 11.550054545149003,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "thrust_bias",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 0,
+          "thrust_scale_range": [
+            0.9,
+            1.1
+          ]
+        }
+      }
+    },
+    "sensor_noise": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 88000,
+        "success_rate": 0.84,
+        "crash_rate": 0.16,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.4046896342132502,
+        "std_final_velocity_error": 0.5099408039185651,
+        "mean_fuel_used": 4.420717545508407,
+        "std_fuel_used": 0.2538463298301063,
+        "mean_landing_time": 7.356999999999982,
+        "std_landing_time": 0.4696818071843947,
+        "mean_episode_reward": 847.3525209250263,
+        "std_episode_reward": 822.3599882383864,
+        "mean_abs_throttle_delta": 0.529254586043312,
+        "mean_max_velocity": 15.874601851509,
+        "mean_max_acceleration": 16.8049507686148,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 42,
+          "crash": 8
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "sensor_noise",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.05,
+          "action_delay_steps": 0
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 88000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.39234451736639353,
+        "std_final_velocity_error": 0.10826756093449819,
+        "mean_fuel_used": 3.017671237796545,
+        "std_fuel_used": 0.1605526711685407,
+        "mean_landing_time": 4.737999999999991,
+        "std_landing_time": 0.2975836016987485,
+        "mean_episode_reward": 786.7688345076356,
+        "std_episode_reward": 479.28639683760287,
+        "mean_abs_throttle_delta": 0.08539160826925425,
+        "mean_max_velocity": 20.699304017618953,
+        "mean_max_acceleration": 12.118463782194924,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "sensor_noise",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.05,
+          "action_delay_steps": 0
+        }
+      }
+    },
+    "action_delay_1": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 98000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0648865130244116,
+        "std_final_velocity_error": 0.213932646486566,
+        "mean_fuel_used": 4.503810508408584,
+        "std_fuel_used": 0.222316919787806,
+        "mean_landing_time": 7.462999999999982,
+        "std_landing_time": 0.42927962914631623,
+        "mean_episode_reward": 1235.0780118234109,
+        "std_episode_reward": 29.46172425008725,
+        "mean_abs_throttle_delta": 0.01532356351924361,
+        "mean_max_velocity": 16.19012527948837,
+        "mean_max_acceleration": 9.809936030471723,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "action_delay_1",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 1
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 98000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.589552958419382,
+        "std_final_velocity_error": 0.1271776150982611,
+        "mean_fuel_used": 3.01076489225775,
+        "std_fuel_used": 0.06863756228464538,
+        "mean_landing_time": 4.729999999999991,
+        "std_landing_time": 0.15132745950421503,
+        "mean_episode_reward": 769.9882558495403,
+        "std_episode_reward": 148.32219874503585,
+        "mean_abs_throttle_delta": 0.04763445536330429,
+        "mean_max_velocity": 21.212642964681198,
+        "mean_max_acceleration": 11.201810705682298,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "action_delay_1",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 1
+        }
+      }
+    },
+    "action_delay_2": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 108000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.0083583591219947,
+        "std_final_velocity_error": 0.24489840961368442,
+        "mean_fuel_used": 4.55668668653816,
+        "std_fuel_used": 0.2526860964364405,
+        "mean_landing_time": 7.581999999999981,
+        "std_landing_time": 0.47820079464593074,
+        "mean_episode_reward": 1224.5378403915443,
+        "std_episode_reward": 32.45385265000551,
+        "mean_abs_throttle_delta": 0.01789802852088745,
+        "mean_max_velocity": 16.578032272140078,
+        "mean_max_acceleration": 9.810095026374876,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "action_delay_2",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 2
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 108000,
+        "success_rate": 0.98,
+        "crash_rate": 0.02,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 1.130132864747058,
+        "std_final_velocity_error": 0.3882277453721897,
+        "mean_fuel_used": 3.2433678229898213,
+        "std_fuel_used": 0.1928854016197927,
+        "mean_landing_time": 5.20899999999999,
+        "std_landing_time": 0.3563270969207914,
+        "mean_episode_reward": -66.58899272457715,
+        "std_episode_reward": 1076.0926774226168,
+        "mean_abs_throttle_delta": 0.07794931534502408,
+        "mean_max_velocity": 21.6206750739074,
+        "mean_max_acceleration": 12.692658968921194,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 1,
+          "success": 49
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "action_delay_2",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            45.0,
+            55.0
+          ],
+          "initial_velocity_range": [
+            -1.0,
+            1.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.0,
+          "action_delay_steps": 2
+        }
+      }
+    },
+    "combined": {
+      "Baseline PPO": {
+        "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+        "n_episodes": 50,
+        "seed": 118000,
+        "success_rate": 0.4,
+        "crash_rate": 0.6,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 2.728884159689396,
+        "std_final_velocity_error": 1.774922179216975,
+        "mean_fuel_used": 4.210894153083901,
+        "std_fuel_used": 0.6685972642519915,
+        "mean_landing_time": 7.103999999999985,
+        "std_landing_time": 1.469756442408061,
+        "mean_episode_reward": -145.75498187627701,
+        "std_episode_reward": 1098.5133146753562,
+        "mean_abs_throttle_delta": 0.2953939419466372,
+        "mean_max_velocity": 16.3781770098451,
+        "mean_max_acceleration": 13.74337121329677,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "crash": 30,
+          "success": 20
+        },
+        "label": "Baseline PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "base",
+        "stats_path": "results/sweeps/v2_reward/models/vec_normalize.pkl",
+        "scenario": "combined",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -3.0,
+            3.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.03,
+          "action_delay_steps": 1,
+          "dry_mass_range": [
+            9.0,
+            11.0
+          ],
+          "initial_fuel_range": [
+            4.0,
+            6.0
+          ],
+          "gravity_scale_range": [
+            0.95,
+            1.05
+          ],
+          "thrust_scale_range": [
+            0.95,
+            1.05
+          ]
+        }
+      },
+      "Pure Energy PPO": {
+        "model_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_ppo_model.zip",
+        "n_episodes": 50,
+        "seed": 118000,
+        "success_rate": 1.0,
+        "crash_rate": 0.0,
+        "timeout_rate": 0.0,
+        "out_of_bounds_rate": 0.0,
+        "velocity_exceeded_rate": 0.0,
+        "acceleration_exceeded_rate": 0.0,
+        "mean_final_height_error": 0.0,
+        "std_final_height_error": 0.0,
+        "mean_final_velocity_error": 0.6292141757396286,
+        "std_final_velocity_error": 0.2180628525214939,
+        "mean_fuel_used": 3.0339786281749213,
+        "std_fuel_used": 0.3347279419624118,
+        "mean_landing_time": 4.773999999999991,
+        "std_landing_time": 0.5659717307427975,
+        "mean_episode_reward": 590.1151903884237,
+        "std_episode_reward": 439.50809115369617,
+        "mean_abs_throttle_delta": 0.0661829716052602,
+        "mean_max_velocity": 21.148680198436576,
+        "mean_max_acceleration": 11.825063806385092,
+        "mean_safety_interventions": 0.0,
+        "mean_safety_intervention_rate": 0.0,
+        "terminal_reason_counts": {
+          "success": 50
+        },
+        "label": "Pure Energy PPO",
+        "policy_type": "sb3",
+        "algorithm": "PPO",
+        "env": "energy",
+        "stats_path": "results/reproducible/energy_ppo_from_scratch_time/models/pure_energy_vec_normalize.pkl",
+        "scenario": "combined",
+        "reset_options": {
+          "randomize": true,
+          "initial_height_range": [
+            30.0,
+            70.0
+          ],
+          "initial_velocity_range": [
+            -3.0,
+            3.0
+          ],
+          "dry_mass": 10.0,
+          "initial_fuel": 5.0,
+          "gravity_scale": 1.0,
+          "thrust_scale": 1.0,
+          "sensor_noise": 0.03,
+          "action_delay_steps": 1,
+          "dry_mass_range": [
+            9.0,
+            11.0
+          ],
+          "initial_fuel_range": [
+            4.0,
+            6.0
+          ],
+          "gravity_scale_range": [
+            0.95,
+            1.05
+          ],
+          "thrust_scale_range": [
+            0.95,
+            1.05
+          ]
+        }
+      }
+    }
+  }
+}

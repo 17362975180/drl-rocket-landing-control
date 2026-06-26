@@ -5,4 +5,4 @@ authors:
   - name: "ycy"
 date-released: "2026-06-25"
 license: MIT
-abstract: "Deep reinforcement learning project for one-dimensional vertical rocket soft landing with PPO, energy-aware rewards, robustness evaluation, and controller baselines."
+abstract: "Energy-Guided PPO project for one-dimensional vertical rocket soft landing, with energy-aware rewards, robustness evaluation, and controller baselines."

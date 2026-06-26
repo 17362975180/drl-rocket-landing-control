@@ -1,0 +1,62 @@
+{
+  "Baseline PPO": {
+    "model_path": "results/sweeps/v2_reward/models/final_model.zip",
+    "n_episodes": 100,
+    "seed": 17000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 1.1632341887442292,
+    "std_final_velocity_error": 0.20303407060888376,
+    "mean_fuel_used": 4.40641551974276,
+    "std_fuel_used": 0.21147388430266398,
+    "mean_landing_time": 7.292999999999982,
+    "std_landing_time": 0.3933204800159774,
+    "mean_episode_reward": 1249.36764980562,
+    "std_episode_reward": 27.16399606345416,
+    "mean_abs_throttle_delta": 0.014732619204422264,
+    "mean_max_velocity": 15.767230148927192,
+    "mean_max_acceleration": 9.809996654390769,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 100
+    }
+  },
+  "Pure Energy-Guided PPO": {
+    "model_path": "results\\reproducible\\energy_ppo_from_scratch_time\\models\\pure_energy_ppo_model.zip",
+    "n_episodes": 100,
+    "seed": 17000,
+    "success_rate": 1.0,
+    "crash_rate": 0.0,
+    "timeout_rate": 0.0,
+    "out_of_bounds_rate": 0.0,
+    "velocity_exceeded_rate": 0.0,
+    "acceleration_exceeded_rate": 0.0,
+    "mean_final_height_error": 0.0,
+    "std_final_height_error": 0.0,
+    "mean_final_velocity_error": 0.2987480866109933,
+    "std_final_velocity_error": 0.10202646306163082,
+    "mean_fuel_used": 3.0149130225218834,
+    "std_fuel_used": 0.12079352747004933,
+    "mean_landing_time": 4.715999999999991,
+    "std_landing_time": 0.22213509403063633,
+    "mean_episode_reward": 880.9644053730299,
+    "std_episode_reward": 292.07211184431,
+    "mean_abs_throttle_delta": 0.040810325190563816,
+    "mean_max_velocity": 20.679963148325264,
+    "mean_max_acceleration": 11.171964204424706,
+    "mean_safety_interventions": 0.0,
+    "mean_safety_intervention_rate": 0.0,
+    "terminal_reason_counts": {
+      "success": 100
+    },
+    "strategy": "Pure Energy-Guided PPO",
+    "stats_path": "results\\reproducible\\energy_ppo_from_scratch_time\\models\\pure_energy_vec_normalize.pkl"
+  }
+}
